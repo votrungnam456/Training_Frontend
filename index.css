@@ -12,8 +12,6 @@ body{
 }
 #right-content{
      background-color: #424242;
-     float: right;
-     width: 40%;
      min-height: 50vh;
 }
 .clear{
@@ -28,14 +26,30 @@ body{
 .w60{
      width: 60%; 
 }
+.w70{
+     width: 70%; 
+}
+.w65{
+     width: 65%; 
+}
+.w30{
+     width: 30%;
+}
+
 .w40{
      width: 40%;
+}
+.margin-8{
+     margin:8%
 }
 .margin-left-20{
      margin-left: 20%;
 }
 .margin-left-20px{
      margin-left: 20px;
+}
+.margin-left-5px{
+     margin-left: 5px;
 }
 .margin-left-30px{
      margin-left: 30px;
@@ -52,8 +66,17 @@ body{
 .margin-bottom-30{
      margin-bottom: 30%;
 }
-.margin-top-30{
-     margin-top: 30%;
+.margin-top-20{
+     margin-top: 20%;
+}
+.margin-top-25{
+     margin-top: 25%;
+}
+.margin-bottom-5{
+     margin-bottom: 5%;
+}
+.margin-bottom-15{
+     margin-bottom: 15%;
 }
 .margin-top-5{
      margin-top:5%;
@@ -68,24 +91,21 @@ body{
 .add-icon::before{
      content: "";
      display: block;
-     background: url("icon.png") no-repeat;
-     width: 30px;
-     height: 30px;
+     background: url("icn_01.png") no-repeat;
+     width: 12px;
+     height: 11px;
      float: left;
-     margin: 0 6px 0 0;
+     margin: 3px 6px 0 0;
 
 }
 
 ul{
      list-style:none;
+     list-style-image: url('icn_left_content_list.png');
 }
-.list-info li::before{
-     content: ""; 
-     display: inline-block;
-     background: url("icon2.png") no-repeat;
-     width: 20px;
-     height: 20px;
-     margin: 0 6px 0 0;
+ul li{
+     margin-bottom: 5px;
+     font
 }
 .border-radius-5px{
      border-radius: 5px 5px 5px 5px;
