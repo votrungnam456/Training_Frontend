@@ -1,0 +1,92 @@
+
+body{
+     background-color: black;
+     color:white
+}
+.colo-grey{
+     color:grey;
+}
+#left-content{   
+
+
+}
+#right-content{
+     background-color: #424242;
+     float: right;
+     width: 40%;
+     min-height: 50vh;
+}
+.clear{
+     clear: both;
+ }
+.float-left{
+     float: left;
+}
+.float-right{
+     float: right;
+}
+.w60{
+     width: 60%; 
+}
+.w40{
+     width: 40%;
+}
+.margin-left-20{
+     margin-left: 20%;
+}
+.margin-left-20px{
+     margin-left: 20px;
+}
+.margin-left-30px{
+     margin-left: 30px;
+}
+.w50{
+     width: 50%;
+}
+.line{
+     color: rgb(196, 196, 196);
+     border-bottom: 2px solid rgb(196, 196, 196);
+     margin-left:20px;
+     margin-right: 20px;
+}
+.margin-bottom-30{
+     margin-bottom: 30%;
+}
+.margin-top-30{
+     margin-top: 30%;
+}
+.margin-top-5{
+     margin-top:5%;
+}
+
+.align-center{
+     text-align: center;
+}
+#content-below-right p{
+     display: inline;
+}
+.add-icon::before{
+     content: "";
+     display: block;
+     background: url("icon.png") no-repeat;
+     width: 30px;
+     height: 30px;
+     float: left;
+     margin: 0 6px 0 0;
+
+}
+
+ul{
+     list-style:none;
+}
+.list-info li::before{
+     content: ""; 
+     display: inline-block;
+     background: url("icon2.png") no-repeat;
+     width: 20px;
+     height: 20px;
+     margin: 0 6px 0 0;
+}
+.border-radius-5px{
+     border-radius: 5px 5px 5px 5px;
+}
