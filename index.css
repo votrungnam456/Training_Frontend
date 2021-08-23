@@ -1,112 +1,160 @@
-
 body{
-     background-color: black;
-     color:white
-}
-.colo-grey{
-     color:grey;
-}
-#left-content{   
-
-
-}
-#right-content{
-     background-color: #424242;
-     min-height: 50vh;
-}
-.clear{
-     clear: both;
+     margin: 0px;
+     padding: 0px;
  }
-.float-left{
-     float: left;
+ img{
+      background-size: 100%;
+ }
+.body__content{
+     width: 363px ;
+     height: 774px;
+     margin-left: 40vw;
+     /* padding: 16px 25px 25px 22px; */
 }
-.float-right{
-     float: right;
-}
-.w60{
-     width: 60%; 
-}
-.w70{
-     width: 70%; 
-}
-.w65{
-     width: 65%; 
-}
-.w30{
-     width: 30%;
+.content{
+     background-color: #E6F3FB;
+     width: 316px;
+     height:765px;
+     margin: 0 0 0 22px;
 }
 
-.w40{
-     width: 40%;
+.blue{
+     color: #0A6395;
 }
-.margin-8{
-     margin:8%
+.blog__roll, .horoscopes, .get__news__on__the__go, .line__black, .competitions{
+     margin: 6px 9px 4px 11px;
 }
-.margin-left-20{
-     margin-left: 20%;
-}
-.margin-left-20px{
-     margin-left: 20px;
-}
-.margin-left-5px{
-     margin-left: 5px;
-}
-.margin-left-30px{
-     margin-left: 30px;
-}
-.w50{
-     width: 50%;
+.content__horoscopes , .first__content__get__news__on__the__go, .content__blogroll, .content__competitions{
+     background-color: #FFF;
 }
 .line{
-     color: rgb(196, 196, 196);
-     border-bottom: 2px solid rgb(196, 196, 196);
-     margin-left:20px;
-     margin-right: 20px;
+     border-bottom: 5px solid #F7A418;
+     margin-bottom: 0px;
+     margin-top:0px;
+     padding-top:10px;
 }
-.margin-bottom-30{
-     margin-bottom: 30%;
+.line__black{
+     border-bottom: 1px solid #595959;
+     margin-bottom: 0px;
+     /* margin-top:0px;
+     padding-top:10px; */
 }
-.margin-top-20{
-     margin-top: 20%;
+.float__left{
+     float: left;
 }
-.margin-top-25{
-     margin-top: 25%;
+.float__right{
+     float: right;
 }
-.margin-bottom-5{
-     margin-bottom: 5%;
+.clear{
+     clear:both;
 }
-.margin-bottom-15{
-     margin-bottom: 15%;
+/*css blogroll */
+.img__blogroll{
+     width: 50%;
+     margin-top: 7px;
+     margin-left: 8px;
 }
-.margin-top-5{
-     margin-top:5%;
+.img__blogroll img{
+     width:156px;
+     height:81px;
+}
+.content__img__blogroll{
+     width:37%;
+     margin-top: 7px;
+     margin-left: 15px;
+
 }
 
-.align-center{
-     text-align: center;
+.title__img__blogroll{
+     color: #0A6395;
+     font-family: "Arial BoldMT","Adobe Invis Font","Myriad ProRegular";
 }
-#content-below-right p{
+.first__content__blogroll{
+     margin-bottom: 12px;
+}
+.content__img__blogroll p{
+     margin:0px;
+     font-size: 13px;
+     font-family: "Arial Italic MT","Arial MT","Adobe Invis Font","Myriad ProRegular";
+}
+.second__content__blogroll__chat{
+     color: #0A6395;
+      font-size: 15px;
+}
+.second__content__blogroll__chat p{
+     background-color: #F9F1C2;
+     font-size: 13px;
+     font-family: "Arial BoldMT","Aria lMT","Adobe Invis Font","Myriad ProRegular";
+     margin: 0px 0px 3px 0px;
+     padding: 9px 0px 9px 8px;
+
+}
+/* 24 */
+/*CSS Horoscopes */
+.img__horoscopes{
+     margin-top: 24px;
+     width: 30%;
+}
+.img__horoscopes img{
+     width: 76px;
+     height: 85px;
+     margin-left: 17px;
+}
+
+.content__img__horoscopes{
+     margin-top: 24px;
+     margin-left: 21px;
+     width: 60%;
+}
+.content__img__horoscopes p, .content__img__horoscopes span{
+     font-size: 11px;
+}
+.title_img_horoscopes{
+     font-size: 15px;
+     
+}
+.second__content__horoscopes{
+     background-image: url("bg_horoscope_second_content_01.png") ;
+     background-repeat: no-repeat;
+     width: 100%;
+     padding: 7px 0px 10px 23px;
+     font-size: 11px;
+}
+.second__content__horoscopes p{
+     margin:0px;
+}
+.second__content__horoscopes p b{
+     color: #0A6395;
+}
+
+/*CSS Get news on the go */
+
+.content__get__news{
+     width: 40%;
+     margin: 24px 0px 0px 23px;
+     font-size: 12px;
+     font-family: "Adobe Invis Font","Myriad Pro Regular","Times New Roman PSMT";
+}
+.p__content{
      display: inline;
 }
-.add-icon::before{
-     content: "";
-     display: block;
-     background: url("icn_01.png") no-repeat;
-     width: 12px;
-     height: 11px;
-     float: left;
-     margin: 3px 6px 0 0;
 
+.img__get__news img{
+     width: 116px;
+     height: 113px;
 }
 
-ul{
-     list-style:none;
-     list-style-image: url('icn_left_content_list.png');
+
+/* CSS competitions */
+.title__competitions{
+    display: inline;
 }
-ul li{
-     margin-bottom: 5px;
-     font
+.content__competitions{
+     border: 2px solid #595959;
+     font-size: 12px;
+     font-family: "Adobe Invis Font","Myriad ProRegular","Times New Roman PSMT";
+     padding: 12px 0px 9px 9px;
 }
-.border-radius-5px{
-     border-radius: 5px 5px 5px 5px;
+.content__competitions p{
+     display: inline;
 }
