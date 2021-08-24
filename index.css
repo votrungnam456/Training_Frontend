@@ -1,7 +1,10 @@
-body{
+*{
      margin: 0px;
      padding: 0px;
  }
+*{
+     font-family: Arial, Helvetica, sans-serif;
+}
  img{
       background-size: 100%;
  }
@@ -14,30 +17,22 @@ body{
 .content{
      background-color: #E6F3FB;
      width: 316px;
-     height:765px;
+     height:auto;
      margin: 0 0 0 22px;
 }
 
-.blue{
-     color: #0A6395;
+.blogroll, .horoscopes, .get__news, .competitions{
+     margin: 0px 9px 4px 11px;
+     font-size: 16px;
 }
-.blog__roll, .horoscopes, .get__news__on__the__go, .line__black, .competitions{
-     margin: 6px 9px 4px 11px;
-}
-.content__horoscopes , .first__content__get__news__on__the__go, .content__blogroll, .content__competitions{
+.horoscopes__content , .get__news__content--first, .blogroll__content, .content__competitions{
      background-color: #FFF;
 }
 .line{
      border-bottom: 5px solid #F7A418;
      margin-bottom: 0px;
      margin-top:0px;
-     padding-top:10px;
-}
-.line__black{
-     border-bottom: 1px solid #595959;
-     margin-bottom: 0px;
-     /* margin-top:0px;
-     padding-top:10px; */
+     padding-top:2px;
 }
 .float__left{
      float: left;
@@ -49,112 +44,140 @@ body{
      clear:both;
 }
 /*css blogroll */
-.img__blogroll{
+.blogroll__content--img{
      width: 50%;
      margin-top: 7px;
      margin-left: 8px;
 }
-.img__blogroll img{
+.blogroll__content--img img{
      width:156px;
      height:81px;
 }
-.content__img__blogroll{
+.blogroll__content--description__img{
      width:37%;
      margin-top: 7px;
      margin-left: 15px;
 
 }
-
-.title__img__blogroll{
-     color: #0A6395;
-     font-family: "Arial BoldMT","Adobe Invis Font","Myriad ProRegular";
+.blogroll__content--description__img p{
+     margin:0px;
+     font-size: 12px;
 }
-.first__content__blogroll{
+.blogroll__content--title__img{
+     color: #0A6395;
+}
+.blogroll__content--first{
      margin-bottom: 12px;
 }
-.content__img__blogroll p{
-     margin:0px;
-     font-size: 13px;
-     font-family: "Arial Italic MT","Arial MT","Adobe Invis Font","Myriad ProRegular";
-}
-.second__content__blogroll__chat{
+
+.blogroll__content--second{
      color: #0A6395;
       font-size: 15px;
 }
-.second__content__blogroll__chat p{
-     background-color: #F9F1C2;
-     font-size: 13px;
-     font-family: "Arial BoldMT","Aria lMT","Adobe Invis Font","Myriad ProRegular";
-     margin: 0px 0px 3px 0px;
-     padding: 9px 0px 9px 8px;
 
+.blogroll__content--second p{
+     background-color: #F9F1C2;
+     font-size: 12px;
+     margin:0px;
+     padding: 9px 0px 9px 8px;
+     border-bottom: 1px solid #FFF;
 }
 /* 24 */
 /*CSS Horoscopes */
-.img__horoscopes{
+.horoscopes__content--first{
+     margin-bottom: 15px;
+}
+.horoscopes__content--img{
      margin-top: 24px;
      width: 30%;
 }
-.img__horoscopes img{
+.horoscopes__content--img img{
      width: 76px;
      height: 85px;
      margin-left: 17px;
 }
 
-.content__img__horoscopes{
+.horoscopes__content--description__img{
      margin-top: 24px;
      margin-left: 21px;
      width: 60%;
 }
-.content__img__horoscopes p, .content__img__horoscopes span{
+.horoscopes__content--description__img p{
      font-size: 11px;
+     line-height: 14px;
+     margin-top: 9px;
+     margin-left: 3px;
+     padding-right: 7px;
 }
-.title_img_horoscopes{
-     font-size: 15px;
-     
+.horoscopes__content--description__img h4{
+     font-size: 11px;
+     font-weight: 100;
+     color: #595959;
 }
-.second__content__horoscopes{
+.horoscopes__content--title__img{
+     font-size: 15px;    
+}
+.horoscopes__content--second{
      background-image: url("bg_horoscope_second_content_01.png") ;
      background-repeat: no-repeat;
      width: 100%;
      padding: 7px 0px 10px 23px;
      font-size: 11px;
 }
-.second__content__horoscopes p{
+.horoscopes__content--second p{
      margin:0px;
 }
-.second__content__horoscopes p b{
+.horoscopes__content--second--link{
+     font-weight: bold;
+     text-decoration: none;
      color: #0A6395;
 }
 
 /*CSS Get news on the go */
-
-.content__get__news{
+.get__news__title{
+     margin-top: 15px;
+}
+.get__news__text{
      width: 40%;
      margin: 24px 0px 0px 23px;
      font-size: 12px;
-     font-family: "Adobe Invis Font","Myriad Pro Regular","Times New Roman PSMT";
-}
-.p__content{
-     display: inline;
 }
 
-.img__get__news img{
-     width: 116px;
+.p__content{
+     width: 150px;
+     height: auto;
+     margin-bottom: 11px;
+}
+.get__news__text--link{
+     color: #0A6395;
+     text-decoration: none;
+}
+.get__news--img{
      height: 113px;
+}
+.get__news--img img{
+     width: 116px;
+     height: 100%;
 }
 
 
 /* CSS competitions */
-.title__competitions{
-    display: inline;
+.competitions{
+     padding-bottom:20px;
 }
-.content__competitions{
+.competitions__title{
+     border-top: 1px solid #595959;
+     padding-top: 6px;
+     margin-top: 8px;
+     margin-bottom: 0px;
+}
+.competitions__content{
      border: 2px solid #595959;
+     color:#4D5D73;
      font-size: 12px;
-     font-family: "Adobe Invis Font","Myriad ProRegular","Times New Roman PSMT";
      padding: 12px 0px 9px 9px;
+     
 }
-.content__competitions p{
+.competitions__content p{
      display: inline;
 }
