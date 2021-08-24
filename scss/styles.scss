@@ -1,0 +1,123 @@
+*{
+     font-family: 'Times New Roman', Arial, serif;
+     margin:0px;
+     padding: 0px;
+}
+
+.container{
+     width: 500px;
+     height: auto;
+     margin:auto;
+     border: 1px solid #dfdfdf;
+     .profile{
+          .profile__title{
+               font-size: 17px;
+               margin-top: 3px;
+               margin-left: 2px;
+               margin-bottom: 4px;
+               letter-spacing: 0.9px;
+          }
+          .profile__content__text{
+               height: 100%;
+            font-size: 15px;
+            width: 100%;
+            margin-left: 13px;
+            margin-top: 1px;
+            padding-bottom: 10px;
+            line-height: 17px;
+            overflow-y: scroll;
+            overflow-x: scroll;
+          }
+          .profile__content{
+               top: -14px;
+               position: relative;
+               box-shadow: rgba(0, 0, 0, 0.27) 0px 39px 12px -28px inset;
+               display: flex;
+               height: 90px;
+               padding-left: 13px;
+               padding-right: 10px;
+               padding-top: 14px; 
+          }
+     }
+     .facts{
+          margin-top: 16px;
+          .facts__title{
+               font-size: 17px;
+               margin-left: 5px;
+               letter-spacing:0.7px
+          }
+          .facts__list{
+               list-style:none;
+               font-size: 15px;
+               line-height: 20px;
+               font-weight: 100;
+               letter-spacing: 0px;
+               margin: 18px 0px 61px 0px;
+               padding: 0px 60px 0px 34px;
+          }
+          .facts__item--star::before{
+               content: "★";
+               color: #66b4fc;
+               font-size: 24px;
+          }
+     }
+     .message{
+          padding: 5px 0px 0px 18px;
+          margin: 0px 0px 1px 1px;
+          .message__content{
+            font-size: 15px;
+            font-weight: 100;
+            padding: 0;
+            margin: 0;
+          }
+          .message__info{
+            font-size: 13px;
+            padding-bottom: 2px;
+            margin-bottom: -3px;
+            padding-left: 33px;
+            margin-top: 3px;
+            .message__info--link{
+              text-decoration: none;
+              color: #1424f4;
+            }
+          }
+        }
+        .message--bg{
+          background: url("/images/pic_layer.png") no-repeat;     
+        }
+     .comment{
+          margin-top: 20px;
+          margin-left: 5px;
+          .comment__title{
+               text-align: center;
+               margin-bottom: 0px;
+          }
+          .comment__input{
+               font-size: 15px;
+               display: flex;
+               .comment__input--label{
+                    width: 100px;
+               }
+               .comment__input--text{
+                    width: 136px;
+                    height: 17px;
+                    border: 1px solid #dfdfdf;
+                    margin-bottom: 7px;
+               }
+               .comment__input--email{
+                    margin-top: 6px;
+               }
+               .comment__input--label--textarea{
+                    width: 100px;
+                    padding-top: 35px          
+               }
+               .comment__input--textarea{
+                    width: 100%;
+                    height: 78px;
+                    margin:0px 5px 8px 22px;
+                    resize: none;
+                    border: 1px solid #dfdfdf;
+               }
+          }
+     }
+}
