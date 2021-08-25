@@ -74,14 +74,18 @@
      color: #0A6395;
       font-size: 15px;
 }
-
-.blogroll__content--second p{
+.blogroll__content--second__list{
+     list-style: none;
      background-color: #F9F1C2;
      font-size: 12px;
      margin:0px;
-     padding: 9px 0px 9px 8px;
-     border-bottom: 1px solid #FFF;
+
 }
+.blogroll__content--second__list li{
+     border-bottom: 1px solid #FFF;
+     padding: 9px 0px 9px 8px;
+}
+
 /* 24 */
 /*CSS Horoscopes */
 .horoscopes__content--first{
