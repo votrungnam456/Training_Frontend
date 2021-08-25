@@ -14,15 +14,16 @@
      margin-top: 3px;
      margin-left: 2px;
      margin-bottom: 4px;
-     letter-spacing: 0.9px;
+     letter-spacing: 0.5px;
 }
 .container .profile .profile__content__text {
      height: 100%;
      font-size: 15px;
      width: 100%;
-     margin-left: 13px;
+     margin-left: 5px;
      margin-top: 1px;
      padding-bottom: 10px;
+     padding-left: 7px;
      line-height: 17px;
      overflow-y: scroll;
      overflow-x: scroll;
@@ -43,7 +44,6 @@
 .container .facts .facts__title {
      font-size: 17px;
      margin-left: 5px;
-     letter-spacing: 0.7px;
 }
 .container .facts .facts__list {
      list-style: none;
@@ -58,10 +58,6 @@
      content: "★";
      color: #66b4fc;
      font-size: 24px;
-}
-.container .message {
-     padding: 5px 0px 0px 18px;
-     margin: 0px 0px 1px 1px;
 }
 .container .message .message__content {
      font-size: 15px;
@@ -82,6 +78,8 @@
 }
 .container .message--bg {
      background: url("/images/pic_layer.png") no-repeat;
+     padding: 5px 0px 0px 18px;
+     margin: 0px 0px 1px 1px;
 }
 .container .comment {
      margin-top: 20px;
