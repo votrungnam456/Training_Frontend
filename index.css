@@ -3,15 +3,14 @@ body{
      background-color: black;
      color:white
 }
-.colo-grey{
-     color:grey;
+.color__1{
+     color:#595959;
 }
-#left-content{   
-
-
+.color__2{
+     color:#767884;
 }
 #right-content{
-     background-color: #424242;
+     background-color: #232227;
      min-height: 50vh;
 }
 .clear{
@@ -57,11 +56,16 @@ body{
 .w50{
      width: 50%;
 }
-.line{
-     color: rgb(196, 196, 196);
-     border-bottom: 2px solid rgb(196, 196, 196);
-     margin-left:20px;
-     margin-right: 20px;
+.line-left{
+     color: #3E3E40;
+     border-bottom: 0.5px dotted #3F3F41;
+     margin-left: 20px;
+     margin-right: 15px;
+}
+.line-right{
+     border-bottom: 0.5px solid#353439;
+     margin-left: 20px;
+     margin-right: 15px;
 }
 .margin-bottom-30{
      margin-bottom: 30%;
@@ -81,12 +85,23 @@ body{
 .margin-top-5{
      margin-top:5%;
 }
-
+.margin-top-10{
+     margin-top:10%;
+}
 .align-center{
      text-align: center;
 }
-#content-below-right p{
-     display: inline;
+.content-below-right{
+     margin-left: 11%;
+     
+}
+.content-below-right p{
+     /* display: inline; */
+     margin-bottom: -30px;
+     
+}
+.line-height-15{
+     line-height: 15px;
 }
 .add-icon::before{
      content: "";
@@ -99,13 +114,15 @@ body{
 
 }
 
-ul{
+.list-info{
      list-style:none;
      list-style-image: url('icn_left_content_list.png');
+     padding-left: 32px;
+     color:#595959;
 }
-ul li{
-     margin-bottom: 5px;
-     font
+.list-info li{
+     margin-bottom: 10px;
+
 }
 .border-radius-5px{
      border-radius: 5px 5px 5px 5px;
