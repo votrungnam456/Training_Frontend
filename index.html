@@ -2,93 +2,67 @@
 <html lang="en">
 
 <head>
-     <title></title>
      <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Bài 2 - Võ Trung Nam</title>
-     <link href="index.css" rel="stylesheet">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="css/index.css" rel="stylesheet">
+     <title>Bài 4</title>
 </head>
 
 <body>
-     <div class="body__content" >
-          <div class="content">
-               <div class="blogroll">
-                    <h4 class="line">Blogroll</h4>
-                    <div class="blogroll__content">
-                         <div class="blogroll__content--first">
-                              <div class="float__left blogroll__content--img">
-                                   <img src="pic_blog_roll_01.png" alt="from_psd_blogroll@1X" />
-                              </div>
-                              <div class="float__left blogroll__content--description__img">
-                                   <b class="blogroll__content--title__img">The Nerve</b>
-                                   <p><i>Lorem ipsum dolor</i> sit amet, consec tetur adipiscing elit. Suspendisse</p>
-                              </div>
-                              <div class="clear"></div>
-                         </div>
-                         <div class="blogroll__content--second">
-                              <ul class="blogroll__content--second__list">
-                                   <li><b>Splat!</b>: sometimes, surely a girl just wants sex?</li>
-                                   <li><b>Ask Bossy</b>: I called the one-armed man ...</li>
-                                   <li><b>Blogocracy</b>: It’s hello and goodbye from me</li>
-                              </ul>
-                         </div>
-                    </div>
+     <div>
+          <div class="form">
+               <div class="form__item">
+                    <p class="form__item--text">Username: </p>
+                    <input id="input__username" class="form__item--input"/>
+                    <p id="error__username" class="form__item--error">Username must'n be empty and length min 8 letter</p>
                </div>
-               <div class="horoscopes">
-                    <h4 class="line">Horoscopes</h4>
-                    <div class="horoscopes__content">
-                         <div class="horoscopes__content--first">
-                              <div class="float__left horoscopes__content--img">
-                                   <img src="pic_horoscope_01.png" alt="from_psd_horoscope2@1X" />
-                              </div>
-                              <div class="float__left horoscopes__content--description__img">
-                                   <h3 class="horoscopes__content--title__img">Libra</h3>
-                                   <h4>Sep 24 - Oct 23</h4>
-                                   <p>There’s something you consider
-                                        attractive but impossible. Watch out.
-                                        It is actually possible. Your dream
-                                        could come true. Your wish could be
-                                        granted. Your hope could turn out
-                                        to... <a href="#">>></a></p>
-                              </div>
-                              <div class="clear"></div>
-                         </div>
-                         <div class="horoscopes__content--second">
-                              <p>Powered by Jonathan Cainer<br><a href="#" class="horoscopes__content--second--link">Read All Horoscopes</a></p>
-                         </div>
-                    </div>
+               <div class="form__item">
+                    <p class="form__item--text">Password: </p>
+                    <input id="input__password" class="form__item--input" type="password"/>
+                    <p id="error__password" class="form__item--error">Password must'n be empty and length min 8 letter</p>
                </div>
-               <div class="get__news">
-                    <h4 class="line get__news__title">Get news on the go</h4>
-                    <div class="get__news__content">
-                         <div class="get__news__content--first">      
-                              <div class="float__left get__news__text">
-                                   <p class="p__content">Keep in touch with the 
-                                        latest news on the move 
-                                        with the mobile edition of 
-                                        news.com.au</p>
-                                   <a href="#" class="get__news__text--link">Get News mobile</a>
-                              </div>
-                              <div class="float__right get__news--img">
-                                   <img src="pic_get_news_on_the_go_01.png" alt="from_psd_get_news_on_the_go_3@1X"/>
-                              </div>
-                              <div class="clear"></div>
-                         </div>
-                    </div>
+               <div class="form__item">
+                    <p class="form__item--text">Email: </p>
+                    <input id="input__email" class="form__item--input"/>
+                    <p id="error__email" class="form__item--error">Email must'n be empty or wrong format</p>
                </div>
-               <div class="line__black"></div>
-               <div class="competitions">
-                    <h4 class="competitions__title">Competitions</h4>
-                    <div class="competitions__content">
-                         <p>Win 1 of 4 tríp to Darwin <br>
-                              Win a trip for you and 3 friends to the Melbourne<br>
-                              Cup with Sunglass Hut!<br>
-                              Win a trip for 4 to Hong Kong</p>
-                    </div>
+               <div class="form__item">
+                    <p class="form__item--text">Birthday:</p>
+                    <input id="input__birthday" class="form__item--input form__item--input__date"/>
+                    <p id="error__birthday" class="form__item--error">Birthday need to smaller than today and must'n be empty</p>
                </div>
-          </div>
-     </div>
-</body>
+               <div class="form__item">
+                    <table class="calendar" id="calendar">
+                         <tr>
+                              <th><button class="calendar__button" id="button__previous__year">&#8647;</button></th>
+                              <th><button class="calendar__button" id="button__previous__month">&larr;</button></th>
+                              <th id="month__list" colspan="2"></th>
+                              <th id="year__list"></th>
+                              <th><button class="calendar__button" id="button__next__month">&rarr;</button></th>
+                              <th><button class="calendar__button" id="button__next__year">&#8649;</button></th>
+                         </tr>
+                         <tr class="calendar__title">
+                              <td>Sun</td>
+                              <td>Mon</td>
+                              <td>Tue</td>
+                              <td>Web</td>
+                              <td>Thu</td>
+                              <td>Fri</td>
+                              <td>Sat</td>
+                         </tr>
+                    </table>
+               </div>
+               <div class="form__item">
+                    <button type="submit" id="button__submit" class="form__item--button">Submit</button>
+                    <button type="submit" id="button__refresh" class="form__item--button">Submit</button>
+               </div>
 
+          </div>
+
+     </div>
+
+</body>
+<script src="/js/index.js"></script>
 </html>
 
