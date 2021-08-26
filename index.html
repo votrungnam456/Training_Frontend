@@ -1,68 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="css/index.css" rel="stylesheet">
-     <title>Bài 4</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="/css/style.css">
+     <title>Bài 5</title>
 </head>
-
 <body>
-     <div>
-          <div class="form">
-               <div class="form__item">
-                    <p class="form__item--text">Username: </p>
-                    <input id="input__username" class="form__item--input"/>
-                    <p id="error__username" class="form__item--error">Username must'n be empty and length min 8 letter</p>
-               </div>
-               <div class="form__item">
-                    <p class="form__item--text">Password: </p>
-                    <input id="input__password" class="form__item--input" type="password"/>
-                    <p id="error__password" class="form__item--error">Password must'n be empty and length min 8 letter</p>
-               </div>
-               <div class="form__item">
-                    <p class="form__item--text">Email: </p>
-                    <input id="input__email" class="form__item--input"/>
-                    <p id="error__email" class="form__item--error">Email must'n be empty or wrong format</p>
-               </div>
-               <div class="form__item">
-                    <p class="form__item--text">Birthday:</p>
-                    <input id="input__birthday" class="form__item--input form__item--input__date"/>
-                    <p id="error__birthday" class="form__item--error">Birthday need to smaller than today and must'n be empty</p>
-               </div>
-               <div class="form__item">
-                    <table class="calendar" id="calendar">
-                         <tr>
-                              <th><button class="calendar__button" id="button__previous__year">&#8647;</button></th>
-                              <th><button class="calendar__button" id="button__previous__month">&larr;</button></th>
-                              <th id="month__list" colspan="2"></th>
-                              <th id="year__list"></th>
-                              <th><button class="calendar__button" id="button__next__month">&rarr;</button></th>
-                              <th><button class="calendar__button" id="button__next__year">&#8649;</button></th>
-                         </tr>
-                         <tr class="calendar__title">
-                              <td>Sun</td>
-                              <td>Mon</td>
-                              <td>Tue</td>
-                              <td>Web</td>
-                              <td>Thu</td>
-                              <td>Fri</td>
-                              <td>Sat</td>
-                         </tr>
-                    </table>
-               </div>
-               <div class="form__item">
-                    <button type="submit" id="button__submit" class="form__item--button">Submit</button>
-                    <button type="submit" id="button__refresh" class="form__item--button">Submit</button>
-               </div>
-
-          </div>
-
+     <div class="controller">
+       <div class="controller__input">
+         <label for="">Tên biều đồ: </label>
+         <input type="text" name="name__chart" value="BIỂU ĐỒ LỊCH SỬ LEVEL OF POSITION">
+       </div>
+       <div class="controller__input">
+         <label for="">Tên dự án: </label>
+         <input type="text" name="name__project" value="TÊN DỰ ÁN">
+       </div>
+       <div class="controller__input">
+         <label for="">Chú thích: </label>
+         <input type="text" name="name__comment" value="LEVEL OF POSITION">
+       </div>
+       <div class="controller__input">
+         <label for="">Giá trị tối đa: </label>
+         <input type="number" name="maxy" min="1" max="12" value="4">
+       </div>
+       <div class="controller__input">
+         <label for="">Số cột: </label>
+         <input type="number" name="maxx" min="1" max="12" value="12">
+       </div>
+       <div class="controller__input">
+          <label for="">Giá trị các cột: </label>
+          <i class="far fa-caret-square-down" id="dropdown__icon"></i>
+         <div class="controller__input__col">
+         </div>
+       </div>
+       <div class="controller__color">
+         <label for="">Màu biểu đồ: </label>
+         <div class="controller__color__item controller__color__item--red"></div>
+         <div class="controller__color__item controller__color__item--aqua"></div>
+         <div class="controller__color__item controller__color__item--orange"></div>
+         <div class="controller__color__item controller__color__item--pink"></div>
+       </div>
      </div>
-
+     <canvas id="col__chart" width="1500pxvw" height="900px"></canvas>
+     <script type="module" src="/js/index.js"></script>
 </body>
-<script src="/js/index.js"></script>
 </html>
-

@@ -1,0 +1,52 @@
+#col__chart{
+  border: 2px solid black;
+}
+
+.controller{
+  display: flex;
+  &__input{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    & i:hover{
+      cursor: pointer;
+    }
+    &__col{
+      position: absolute;
+      background-color: antiquewhite;
+      padding: 10px;
+      top: 34px;
+      display: none;
+      &__item{
+        margin-bottom: 2px;
+        & input{
+          width: 40px;
+        }
+      }
+    }
+  }
+  &__color{
+    display: flex;
+    &__item:hover{
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    &__item{
+      width: 20px;
+      height: 20px;
+      border: 1px solid;
+      margin-right: 2px;
+      &--red{
+        background-color: red;
+      }
+      &--aqua{
+        background-color: aqua;
+      }
+      &--orange{
+        background-color: orange;
+      }
+      &--pink{
+        background-color: pink;
+      }
+    }
+  }
+}
