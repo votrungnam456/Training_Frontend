@@ -78,20 +78,22 @@ function addMonthYearList() {
      selectionMonth.setAttribute("id", "select__month");
      selectionMonth.setAttribute("class","calendar__dropdown");
      selectionMonth.setAttribute("name", "select__month");
+     //add event vào select month
      selectionMonth.addEventListener('change', function () {
           monthSelected = selectionMonth.options[selectionMonth.selectedIndex].value;
           yearSelected = selectionYear.options[selectionYear.selectedIndex].value;
-          getDay(monthSelected, yearSelected)
+          genderCalendar(monthSelected, yearSelected)
      })
      //tạo select year
      let selectionYear = document.createElement("select");
      selectionYear.setAttribute("id", "select__year");
      selectionYear.setAttribute("class","calendar__dropdown");
      selectionYear.setAttribute("name", "select__year");
+     //add event vào select year
      selectionYear.addEventListener('change', function () {
           monthSelected = selectionMonth.options[selectionMonth.selectedIndex].value;
           yearSelected = selectionYear.options[selectionYear.selectedIndex].value;
-          getDay(monthSelected,yearSelected)
+          genderCalendar(monthSelected,yearSelected)
      })
      //add option vào select
      //add month
@@ -120,27 +122,37 @@ function isLeap(year) {
 // lấy ngày được click trên lịch
 function genderCalendar(monthSelected, yearSelected) {
      let lengthTable = calendar.rows.length
+     //clear lịch khi có sự thay đổi
      for(let index = 2 ; index < lengthTable ; index++){
           calendar.deleteRow(2);
      }
+     //Biến kiểm tra tháng và năm được chọn có phải tháng và năm của hiện tại trên hệ thống
      let check = today.getMonth()+1 == monthSelected && today.getFullYear() == yearSelected ? true : false;
      let date = new Date(yearSelected, monthSelected - 1, 1);
+     //lấy ngày trong tháng của năm được chọn
      let dayInTime = monthSelected == 2 ? (28 + isLeap(yearSelected)) : 31 - (monthSelected - 1) % 7 % 2;
      let count = 1;
+     //Lăp 6 lần tương ứng với số dòng tối đa mà 1 lịch có thể có
      for (let i = 1; i <= 6; i++) {
+          //Tạo thẻ thr
           let tr = document.createElement("tr");
           tr.setAttribute("class","calendar__content")
+          //Chạy dòng đàu tiên trên lịch
           if (i == 1 & count <= dayInTime) {
+               // tạo ra các lỗ trống trên lịch ở dòng đầu
+               //date.getDay() là vị trí thứ bắt đầu của ngày 1 trong tháng
                for (let y = 0; y < date.getDay(); y++) {
                     let td = document.createElement("td");
                     tr.appendChild(td);
                }
+               //Lắp các ngày ở dòng đầu vào
                for (let j = date.getDay(); j <= 6; j++) {
                     if (count <= dayInTime) {
                          let td = document.createElement("td");
                          if(check && count == today.getDate()){
                               td.setAttribute("background-color","aqua");
                          }
+                         //Thêm event click tại các ngày
                          td.addEventListener("click",function(){
                               dayInput = td.innerText;
                               inputBirthDay.value=dayInput + "/" + monthSelected + "/" + yearSelected;
@@ -151,13 +163,17 @@ function genderCalendar(monthSelected, yearSelected) {
                     }
                }
           }
+          //Chạy các dòng 2->6
+          //Kiểm tra số render ra so với số ngày trong tháng
           else if(count<= dayInTime){
+               //Lắp các ngày trong tháng vào
                for (let j = 0; j <= 6; j++) {
                     if (count <= dayInTime) {
                          let td = document.createElement("td");
                          if(check && count == today.getDate()){
                               td.style.backgroundColor = "aqua";
                          }
+                         //Thêm event click tại các ngày
                          td.addEventListener("click",function(){
                               dayInput = td.innerText;
                               inputBirthDay.value=monthSelected  + "/" +dayInput  + "/" + yearSelected;
@@ -168,48 +184,80 @@ function genderCalendar(monthSelected, yearSelected) {
                     }
                }
           }
+          //Thêm dòng đã được thêm ngày vào lịch
           calendar.appendChild(tr);
      }
 }
 //thêm các event vào button
 function applyEventForButton() {
+     //Khởi tạo các biến cần thiết
      let yearSelection = document.getElementById("select__year");
      let monthSelection = document.getElementById("select__month");
      yearSelection.value = yearSelected;
      monthSelection.value = monthSelected;
+     //thêm event cho nút lùi một năm
      buttonPreviousYear.addEventListener('click', function(){
+          //Kiểm tra năm trên dropdown có đạt min chưa
           if(yearSelection.selectedIndex != 0){
+               //chưa thì giảm 1 năm
                yearSelection.selectedIndex -= 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
                genderCalendar(monthSelected,yearSelected);
           }
      })
+     //thêm event cho nút lùi một tháng
      buttonPreviousMonth.addEventListener('click', function(){
+          //Kiểm tra tháng trên dropdown có đạt min chưa
           if(monthSelection.selectedIndex != 0){
+               //chưa min thì trừ đi một tháng
                monthSelection.selectedIndex -= 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
                genderCalendar(monthSelected,yearSelected);
           }
+          else{
+               //min rồi thì chuyển thành max và trừ một năm
+               monthSelection.selectedIndex = 11;
+               yearSelection.selectedIndex -= 1;
+               monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
+               yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
+               genderCalendar(monthSelected,yearSelected);
+          }
      })
+     //thêm event tăng một năm
      buttonNextYear.addEventListener('click', function(){
+           //Kiểm tra năm trên dropdown có đạt max chưa
           if(yearSelection.selectedIndex != yearSelection.options.length -1){
+               //Tăng một năm
                yearSelection.selectedIndex += 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
                genderCalendar(monthSelected,yearSelected);
           }
      })
+     //thêm event tăng một tháng
      buttonNextMonth.addEventListener('click', function(){
+          //Kiểm tra tháng trên dropdown có đạt max chưa
           if(monthSelection.selectedIndex != monthSelection.options.length -1){
+               //chưa thì tăng 1 tháng
                monthSelection.selectedIndex += 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
                genderCalendar(monthSelected,yearSelected);
           }
+          else{
+               //rồi thì giảm thành tháng 1 và tăng 1 năm
+               monthSelection.selectedIndex = 0;
+               yearSelection.selectedIndex += 1;
+               monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
+               yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
+               genderCalendar(monthSelected,yearSelected);
+          }
      })
+     //Event submit dữ liệu
      buttonSubmit.addEventListener('click',function(){
+          //tiến hành validate các input
           if(validateInput()){
                username = inputUsername.value;
                password = inputPassword.value;
@@ -218,26 +266,56 @@ function applyEventForButton() {
                // addUser(username,password,email,birthday);
           }
      })
-     buttonRefesh.addEventListener('click',function(){
-       inputUsername
-     })
+     // buttonRefesh.addEventListener('click',function(){
+     // //   inputUsername
+     // })
 }
 //thêm event vào input
 function applyEventForInputDate(){
+     //event click vào input để xuất hiện lịch
      inputBirthDay.addEventListener("click",function(){
           calendar.style.display = "inline";
+     })
+     inputUsername.addEventListener("keypress",function(e){
+          e = e || window.event;  
+          var bad = /[^\sa-z\d]/i,  
+               key = String.fromCharCode(e.keyCode || e.which);  
+          if (e.which !== 0 && e.charCode !== 0 && bad.test(key)) {  
+               e.returnValue = false;  
+               if (e.preventDefault) {  
+                    e.preventDefault();  
+               }  
+          }  
+     })
+     inputPassword.addEventListener("keypress",function(e){
+          e = e || window.event;  
+          var bad = /[^\sa-z\d]/i,  
+               key = String.fromCharCode(e.keyCode || e.which);  
+          if (e.which !== 0 && e.charCode !== 0 && bad.test(key)) {  
+               e.returnValue = false;  
+               if (e.preventDefault) {  
+                    e.preventDefault();  
+               }  
+          }  
      })
 }
 //validate các input
 function validateInput(){
-     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     //mẫu validate của email
+     const validateEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+     const notSpeacialChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+     const notSpeacialCharForEmail = /[ `!#$%^&*()_+\-=\[\]{};':"\\|,<>\/?~]/;
      username = inputUsername.value;
      password = inputPassword.value;
      email = inputEmail.value;
      birthday = inputBirthDay.value;
-     errorUsername.style.display = username.length < 8 ? "inherit" : "none";
-     errorPassword.style.display = password.length < 8 ? "inherit" : "none";
-     errorEmail.style.display = email.length < 8 || !re.test(String(email).toLowerCase()) ? "inherit" : "none";
+     //validate username
+     errorUsername.style.display = username.length < 8 || notSpeacialChar.test(String(username).toLowerCase()) ? "inherit" : "none";
+     //validate password
+     errorPassword.style.display = password.length < 8 || notSpeacialChar.test(String(password).toLowerCase()) ? "inherit" : "none";
+     //validate email
+     errorEmail.style.display = email.length < 8 || !validateEmail.test(String(email).toLowerCase())|| notSpeacialCharForEmail.test(String(password).toLowerCase()) ? "inherit" : "none";
+     //validate birhtday
      let convertDate = new Date(birthday);
      errorBirthday.style.display = birthday == "" ||  today.getTime() - convertDate.getTime() < 0 ? "inherit" : "none";
      if(errorUsername.style.display == "inherit" || errorPassword.style.display == "inherit" || errorEmail.style.display == "inherit" ||errorBirthday.style.display=="inherit"){
