@@ -8,6 +8,7 @@ let buttonNextYear = document.getElementById("button__next__year");
 let buttonNextMonth = document.getElementById("button__next__month");
 let inputBirthDay = document.getElementById("input__birthday")
 let buttonSubmit = document.getElementById("button__submit");
+let buttonRefesh = document.getElementById("button__refresh");
 let inputUsername = document.getElementById("input__username");
 let inputPassword = document.getElementById("input__password");
 let inputEmail = document.getElementById("input__email");
@@ -15,7 +16,6 @@ let errorUsername = document.getElementById("error__username");
 let errorPassword = document.getElementById("error__password");
 let errorEmail = document.getElementById("error__email");
 let errorBirthday = document.getElementById("error__birthday");
-
 let username,password, email,birthday, dayInput;
 let months = [
      {
@@ -117,7 +117,8 @@ function isLeap(year) {
      if ((year % 4) || ((year % 100 === 0) && (year % 400))) return 0;
      else return 1;
 }
-function getDay(monthSelected, yearSelected) {
+// lấy ngày được click trên lịch
+function genderCalendar(monthSelected, yearSelected) {
      let lengthTable = calendar.rows.length
      for(let index = 2 ; index < lengthTable ; index++){
           calendar.deleteRow(2);
@@ -129,13 +130,10 @@ function getDay(monthSelected, yearSelected) {
      for (let i = 1; i <= 6; i++) {
           let tr = document.createElement("tr");
           tr.setAttribute("class","calendar__content")
-          // let row = calendar.insertRow(calendar.rows.length);
           if (i == 1 & count <= dayInTime) {
                for (let y = 0; y < date.getDay(); y++) {
                     let td = document.createElement("td");
                     tr.appendChild(td);
-                    // let cell = row.insertCell(y)
-                    // cell.innerHTML = "";
                }
                for (let j = date.getDay(); j <= 6; j++) {
                     if (count <= dayInTime) {
@@ -149,8 +147,6 @@ function getDay(monthSelected, yearSelected) {
                          })
                          td.innerHTML = count;
                          tr.appendChild(td);
-                         // let cell = row.insertCell(j)
-                         // cell.innerHTML = count;
                          count++;
                     }
                }
@@ -168,8 +164,6 @@ function getDay(monthSelected, yearSelected) {
                          })
                          td.innerHTML = count;
                          tr.appendChild(td);
-                         // let cell = row.insertCell(j)
-                         // cell.innerHTML = count;
                          count++;
                     }
                }
@@ -177,6 +171,7 @@ function getDay(monthSelected, yearSelected) {
           calendar.appendChild(tr);
      }
 }
+//thêm các event vào button
 function applyEventForButton() {
      let yearSelection = document.getElementById("select__year");
      let monthSelection = document.getElementById("select__month");
@@ -187,7 +182,7 @@ function applyEventForButton() {
                yearSelection.selectedIndex -= 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
-               getDay(monthSelected,yearSelected);
+               genderCalendar(monthSelected,yearSelected);
           }
      })
      buttonPreviousMonth.addEventListener('click', function(){
@@ -195,7 +190,7 @@ function applyEventForButton() {
                monthSelection.selectedIndex -= 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
-               getDay(monthSelected,yearSelected);
+               genderCalendar(monthSelected,yearSelected);
           }
      })
      buttonNextYear.addEventListener('click', function(){
@@ -203,7 +198,7 @@ function applyEventForButton() {
                yearSelection.selectedIndex += 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
-               getDay(monthSelected,yearSelected);
+               genderCalendar(monthSelected,yearSelected);
           }
      })
      buttonNextMonth.addEventListener('click', function(){
@@ -211,7 +206,7 @@ function applyEventForButton() {
                monthSelection.selectedIndex += 1;
                monthSelected = monthSelection.childNodes[monthSelection.selectedIndex].value;
                yearSelected = yearSelection.childNodes[yearSelection.selectedIndex].value;              
-               getDay(monthSelected,yearSelected);
+               genderCalendar(monthSelected,yearSelected);
           }
      })
      buttonSubmit.addEventListener('click',function(){
@@ -223,14 +218,15 @@ function applyEventForButton() {
                // addUser(username,password,email,birthday);
           }
      })
+     buttonRefesh.addEventListener('click',function(){
+       inputUsername
+     })
 }
+//thêm event vào input
 function applyEventForInputDate(){
      inputBirthDay.addEventListener("click",function(){
           calendar.style.display = "inline";
      })
-     // inputBirthDay.addEventListener("focusout",function(){
-     //      calendar.style.display = "none";
-     // })
 }
 //validate các input
 function validateInput(){
@@ -239,12 +235,11 @@ function validateInput(){
      password = inputPassword.value;
      email = inputEmail.value;
      birthday = inputBirthDay.value;
-     errorUsername.style.display = username == "" || username.length < 8 ? "inherit" : "none";
-     errorPassword.style.display = password == "" || password.length < 8 ? "inherit" : "none";
-     errorEmail.style.display = email == "" || email.length < 8 || !re.test(String(email).toLowerCase()) ? "inherit" : "none";
+     errorUsername.style.display = username.length < 8 ? "inherit" : "none";
+     errorPassword.style.display = password.length < 8 ? "inherit" : "none";
+     errorEmail.style.display = email.length < 8 || !re.test(String(email).toLowerCase()) ? "inherit" : "none";
      let convertDate = new Date(birthday);
      errorBirthday.style.display = birthday == "" ||  today.getTime() - convertDate.getTime() < 0 ? "inherit" : "none";
-     // console.log(today.getTime() - convertDate.getTime())
      if(errorUsername.style.display == "inherit" || errorPassword.style.display == "inherit" || errorEmail.style.display == "inherit" ||errorBirthday.style.display=="inherit"){
           console.log(false);
           return false;
@@ -253,23 +248,12 @@ function validateInput(){
           console.log(true);
           return true;
      }
-     // if(username == "" ||password == "" ||email == "" || birthDay.value == ""){
-     //      console.log(false);        
-     // }
-     // else{
-     //      if(username.length < 8 || password.length < 8 || email.length < 8){
-     //           console.log(false);
-
-     //      }
-          
-     // };
-
 }
 
 
 
 calendar.style.display = "none";
 addMonthYearList();
-getDay(monthSelected,yearSelected)
+genderCalendar(monthSelected,yearSelected)
 applyEventForButton();
 applyEventForInputDate();
