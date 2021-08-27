@@ -45,6 +45,7 @@
           .facts__title{
                font-size: 17px;
                margin-left: 5px;
+               font-weight: bold;
           }
           .facts__list{
                list-style:none;
@@ -55,20 +56,20 @@
                margin: 18px 0px 61px 0px;
                padding: 0px 60px 0px 34px;
           }
-          .facts__item--star::before{
+          .facts__list li::before{
                content: "★";
                color: #66b4fc;
                font-size: 24px;
           }
      }
      .message{
-          .message__content{
+          h3{
             font-size: 15px;
             font-weight: 100;
             padding: 0;
             margin: 0;
           }
-          .message__info{
+          p{
             font-size: 13px;
             padding-bottom: 2px;
             margin-bottom: -3px;
@@ -95,10 +96,10 @@
           .comment__input{
                font-size: 15px;
                display: flex;
-               .comment__input--label{
+               p{
                     width: 100px;
                }
-               .comment__input--text{
+               input{
                     width: 136px;
                     height: 17px;
                     border: 1px solid #dfdfdf;
@@ -108,7 +109,6 @@
                     margin-top: 6px;
                }
                .comment__input--label--textarea{
-                    width: 100px;
                     padding-top: 35px          
                }
                .comment__input--textarea{
