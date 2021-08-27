@@ -1,3 +1,4 @@
+
 let monthListCol = document.getElementById("month__list");
 let yearListCol = document.getElementById("year__list");
 let calendar = document.getElementById("calendar");
@@ -14,6 +15,7 @@ let errorUsername = document.getElementById("error__username");
 let errorPassword = document.getElementById("error__password");
 let errorEmail = document.getElementById("error__email");
 let errorBirthday = document.getElementById("error__birthday");
+
 let username,password, email,birthday, dayInput;
 let months = [
      {
@@ -218,7 +220,7 @@ function applyEventForButton() {
                password = inputPassword.value;
                email = inputEmail.value;
                birthday = inputBirthDay.value;
-               // config.addUser(username,password,email,birthday);
+               // addUser(username,password,email,birthday);
           }
      })
 }

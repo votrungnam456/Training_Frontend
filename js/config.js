@@ -19,4 +19,4 @@ function addUser(username, password, email, birthday){
 
 }
 
-module.exports.addUser = addUser;
+export {addUser}
