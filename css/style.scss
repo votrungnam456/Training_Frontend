@@ -4,6 +4,7 @@
 
 .controller{
   display: flex;
+
   &__input{
     margin-right: 10px;
     margin-bottom: 10px;
@@ -12,7 +13,7 @@
     }
     &__col{
       position: absolute;
-      background-color: antiquewhite;
+      background-color: aqua;
       padding: 10px;
       top: 34px;
       display: none;
@@ -38,8 +39,8 @@
       &--red{
         background-color: red;
       }
-      &--aqua{
-        background-color: aqua;
+      &--blue{
+        background-color: #3366CC;
       }
       &--orange{
         background-color: orange;

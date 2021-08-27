@@ -1,6 +1,6 @@
 import {drawGraphCol, clearChart} from "./draw.js"
 /* khai báo các biến */
-let color = "aqua";
+let color = "#3366CC";
 let nameChart = $('input[name="name__chart"]').val();
 let nameProject = $('input[name="name__project"]').val();
 let nameComment = $('input[name="name__comment"]').val();
@@ -32,7 +32,7 @@ function updateValueCollumn(){
   for(let i = 0; i < 12; i++){
     let va = parseInt(document.getElementsByName("colnum")[i].value);
     if(va > maxY){
-      $('input[name="maxy"]').val() = va;
+      $('input[name="maxy"]').val(va);
       maxY = va;
       clearChart();
       drawGraphCol(xPosition, yPosition, maxY, maxX, color, nameChart, nameProject, nameComment,yCount);
@@ -99,6 +99,9 @@ $(document).ready(function(){
     else
       $(".controller__input__col").css("display", "none");
   });
+  $("#button__hide__show__controller").click(function(){
+    $("#controller").toggle();
+  })
 })
 
 

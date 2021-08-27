@@ -1,8 +1,8 @@
-function drawText(ctx, centerX, centerY, text, fontSize, center = 0, italic = 0) {
+function drawText(ctx, centerX, centerY, text, fontSize, center = 0, italic = 0, color= "black") {
   ctx.save();
   ctx.beginPath();
   ctx.moveTo(centerX, centerY);
-  ctx.fillStyle = "black";
+  ctx.fillStyle = color;
   if (italic == 1)
     ctx.font = "italic " + fontSize + "px Arial";
   else
@@ -20,7 +20,7 @@ function drawText(ctx, centerX, centerY, text, fontSize, center = 0, italic = 0)
 function drawVerText(ctx, centerX, centerY, text, fontSize) {
   ctx.save();
   ctx.font = "italic " + fontSize + "px Arial";
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "#A7A7A7";
   ctx.translate(centerX, centerY);
   ctx.rotate(-0.5 * Math.PI);
   ctx.fillText(text, 0, 0);
@@ -28,7 +28,7 @@ function drawVerText(ctx, centerX, centerY, text, fontSize) {
 }
 function drawLine(ctx, startX, startY, endX, endY) {
   ctx.beginPath();
-  ctx.fillStyle = "red";
+ ctx.strokeStyle = "#EBEAEA";
   ctx.moveTo(startX, startY);
   ctx.lineTo(endX, endY);
   ctx.stroke();
@@ -48,7 +48,7 @@ function drawGraphCol(posX, posY, numY, numX, color, nameChart, nameProject, nam
   //vẽ text ngang của biểu đồ
   drawVerText(ctx, posX - 50, posY + numY * 50 / 1.5, nameComment, 20);
   //Vẽ text tên dự án
-  drawText(ctx, posX + numX * 50, posY + numY * 50 + 60, nameProject, 20, 1, 1);
+  drawText(ctx, posX + numX * 50, posY + numY * 50 + 60, nameProject, 20, 1, 1,"#A7A7A7");
   //Vẽ chú thích
   if (numX > 9) {
     if (numY <= 6) {
