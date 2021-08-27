@@ -42,7 +42,7 @@ function drawRect(ctx, startX, startY, endX, endY, color) {
 function drawGraphCol(posX, posY, numY, numX, color, nameChart, nameProject, nameComment, yCount) {
   const colGraph = document.getElementById("col__chart");
   const ctx = colGraph.getContext("2d");
-  const xcont = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+  const xCont = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
   //vẽ text tên biểu đồ
   drawText(ctx, posX + numX * 50, posY - 50, nameChart, 20, 1);
   //vẽ text ngang của biểu đồ
@@ -71,7 +71,7 @@ function drawGraphCol(posX, posY, numY, numX, color, nameChart, nameProject, nam
   }
   //Vẽ các cột giá trị của biểu đồ
   for (let i = 0; i < numX; i++) {
-    drawText(ctx, posX + 50 + i * 100, posY + numY * 50 + 30, xcont[i], 15);
+    drawText(ctx, posX + 50 + i * 100, posY + numY * 50 + 30, xCont[i], 15);
     if (yCount[i] == 0) {
       drawRect(ctx, posX + 20 + i * 100, posY + (numY - yCount[i]) * 50, 50, yCount[i] * 50 -10, color);
     }
