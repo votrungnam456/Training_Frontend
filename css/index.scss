@@ -19,14 +19,13 @@ html {
      -moz-box-shadow: 0px 0px 0px rgb(51, 51, 51);
      -o-box-shadow: 0px 0px 0px rgb(51, 51, 51);
      box-shadow: 0px 0px 0px rgb(51, 51, 51);
+     font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+     color:#73523F;
+     line-height: 20px;
 }
 *:before,
 *:after {
   box-sizing: border-box;
-}
-body{
-     font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-     color:#73523F;
 }
 .ml24{
      margin-left: 24px;
@@ -67,6 +66,7 @@ body{
                     &__phone__number{
                          display: flex;
                          justify-content: flex-end;
+                         margin: 13px 0px;
                          p{
                               color: #F0831E;
                               font-size: $font-size-big;
@@ -75,7 +75,6 @@ body{
                          img{
                               width: 26px;
                               height: 23px;
-                              margin-top: 5px;
                          }
                     }
                     &__content{

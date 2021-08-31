@@ -260,7 +260,18 @@
                else
                     $('#navbar').css("display", "block");
           });
-
+          $(window).on("resize",function(){
+               let win = $(this);
+               // console.log(win.width())
+               if(win.width() > 768){
+                    if ($('#navbar').css("display") == "none" || $('#navbar').css("display") == "block")
+                    $('#navbar').css("display", "flex");
+               }
+               else{
+                    if ($('#navbar').css("display") == "flex")
+                    $('#navbar').css("display", "none");
+               }
+          })
      </script>
 </body>
 
