@@ -88,7 +88,7 @@ body{
                display: flex;
                justify-content: space-between;
                list-style: none;
-               padding:0px;
+               padding:5px 0px 0px 0px;
                & li{
                     display: flex;
                     padding: 15px 0px 15px 0px;
@@ -444,10 +444,11 @@ body{
                     justify-content: space-between;
                     border: 1px solid #E7C9A9;
                     // padding:50px;
+                    font-weight: bold;
                     height: auto;
                     &--list{
-                         margin: 30px 25px 0px 30px;
-
+                         margin: 30px 20px 0px 30px;
+                         padding-top:5px;
                          & ul{
                               list-style: none;
                               & li{
@@ -462,7 +463,7 @@ body{
                                    & a{
                                         text-decoration: none;
                                         color:#66402B;
-                                        font-size: $font-size-medium;
+                                        font-size: 14px;
                                    }
                               }
                          }
@@ -476,7 +477,7 @@ body{
                     padding: 21px 35px 0 35px;
                     & p{
                          font-size: $font-size-medium-2;
-                         margin-bottom: 15px;
+                         margin-bottom: 10px;
                          &::before{
                               content: '';
                               display: inline-block;
@@ -489,6 +490,7 @@ body{
                     }
                     & ul{
                          list-style: none;
+                         margin-bottom: 5px;
                          & li{
                               display: flex;
                                    align-items: center;                                  
