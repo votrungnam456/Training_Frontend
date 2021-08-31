@@ -6,6 +6,7 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="/css/index.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <title>Document</title>
 </head>
 
@@ -34,29 +35,34 @@
                </div>
           </div>
           <nav class="nav">
-               <ul class="nav__menu container--initial">
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">店舗紹介</a></li>
-                    <li>
-                         <a href="">エステ</a>
-                         <ul class="nav__menu--dropdown">
-                              <li><a href="">フェイシャル</a></li>
-                              <li><a href="">ダイエット</a></li>
-                              <li><a href="">脱毛</a></li>
-                              <li><a href="">美肌再生プログラム</a></li>
-                         </ul>
-                    </li>
-                    <li>
-                         <a href="">ヘアクリニック</a>
-                         <ul class="nav__menu--dropdown">
-                              <li><a href="">発毛</a></li>
-                              <li><a href="">症例</a></li>
-                         </ul>
-                    </li>
-                    <li><a href="">よくあるご質問</a></li>
-                    <li><a href="">お客様の声</a></li>
-                    <li><a href="">アクセス</a></li>
-               </ul>
+               <div class="nav--icon__menu" >
+                    <i id="icon__menu" class="fa fa-bars" width="30px" height="50px"></i>
+               </div>
+               <div class="nav--responsive">
+                    <ul id="navbar" class="nav__menu container--initial">
+                         <li><a href="">HOME</a></li>
+                         <li><a href="">店舗紹介</a></li>
+                         <li>
+                              <a href="">エステ</a>
+                              <ul class="nav__menu--dropdown">
+                                   <li><a href="">フェイシャル</a></li>
+                                   <li><a href="">ダイエット</a></li>
+                                   <li><a href="">脱毛</a></li>
+                                   <li><a href="">美肌再生プログラム</a></li>
+                              </ul>
+                         </li>
+                         <li>
+                              <a href="">ヘアクリニック</a>
+                              <ul class="nav__menu--dropdown">
+                                   <li><a href="">発毛</a></li>
+                                   <li><a href="">症例</a></li>
+                              </ul>
+                         </li>
+                         <li><a href="">よくあるご質問</a></li>
+                         <li><a href="">お客様の声</a></li>
+                         <li><a href="">アクセス</a></li>
+                    </ul>
+               </div>
           </nav>
           <div class="big__img">
                <div class="container--initial">
@@ -196,11 +202,62 @@
                <div class="footer__container container--initial">
                     <div class="footer__container--block__1">
                          <img src="/images/pic_banner_1.png" alt="">
+                         <p>〒525-0032　滋賀県草津市大路1丁目8-1南洋軒ビル6F<br/>
+                              草津駅東口より徒歩2分<br/>
+                              営業時間　11:00～21:00（※入店・予約受付　19：30まで）
+                              </p>
+                         <div class="footer__container--block__1--phone__number">
+                              <button>予約制</button>
+                              <img src="/images/icon_banner_phone_number.png"/>
+                              <p>077-566-1070</p>
+                         </div>
+                    </div>
+                    <div class="footer__container--block__2">
+                         <div class="footer__container--block__2--list">
+                              <ul>
+                                   <li><a href="">HOME</a></li>
+                                   <li><a href="">店舗紹介</a></li>
+                                   <li><a href="">よくあるご質問</a></li>
+                                   <li><a href="">お客様の声</a></li>
+                                   <li><a href="">アクセス</a></li>
+                                   <li><a href="">採用情報</a></li>
+                              </ul>
+                         </div>
+                         <div class="footer__container--block__2--list">
+                              <ul>
+                                   <li><a href="">キャンペーン</a></li>
+                                   <li><a href="">新着情報</a></li>
+                              </ul>
+                         </div>
+                    </div>
+                    <div class="footer__container--block__3">
+                         <p>取り扱いメニュー</p>
+                         <ul>
+                              <li><a href="">フェイシャル</a></li>
+                              <li><a href="">ダイエット</a></li>
+                              <li><a href="">脱毛</a></li>
+                              <li><a href="">美肌再生プログラム</a></li>
+                              <li><a href="">アクティについて</a></li>
+                              <li><a href="">発毛</a></li>
+                              <li><a href="">症例</a></li>
+                         </ul>
                     </div>
                </div>
-
+               <div class="footer--copyright">
+                    <p>Copyright　Feminine（フェミニン）　All Rights Reserved.</p>
+               </div>
           </div>
      </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script type="text/javascript">
+          $('#icon__menu').click(function () { 
+               if($('#navbar').css("display") == "block")
+               $('#navbar').css("display", "none");
+               else
+               $('#navbar').css("display", "block");
+          });
+
+     </script>
 </body>
 
 </html>
