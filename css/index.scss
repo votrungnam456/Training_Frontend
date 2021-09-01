@@ -536,7 +536,7 @@ html {
      }
 }
 @media screen and (max-width: 960px) {
-     .header , .content{
+     .header , .content, .nav--responsive{
           margin: 0px 5px;
      }
      .container{
@@ -573,6 +573,9 @@ html {
                     display: none;
                     left:3rem;
                     & li{
+                         &:last-child{
+                              padding-right: 0px;
+                         }
                          background-image: none;
                          width: 10rem;
                          text-align: center;
@@ -580,33 +583,15 @@ html {
                               background-image: url("/images/pic_dropdown_bg.png");
                               background-size: cover;
                          }
-                    }
-                    &--dropdown{
-                         position: absolute;
-                         top:0%;
-                         left:100%;              
-                         width: 100%;
-                         display: none;
-                         li{
-                              background-color: #FFC472;
-                              border-bottom: 1px solid #D8A260;
-                              background-image: none;
-                              display: flex;                  
-                              &:hover{
-                                   // padding-top: 5px;
-                                   background-image: url("/images/pic_dropdown_bg.png") ;
-                                   background-repeat: no-repeat;
-                                   background-size: 90% 80%;
-                                   background-position: center;
-                                   a{
-                                        color:#FFF;
-                                   }
-                              }
-                              a{
-                                   font-size: $font-size-small;
-                              }
+                         .dropdown{
+                              position: absolute;
+                              top:0%;
+                              left:100%;              
+                              width: 100%;
+                              display: none;
                          }
                     }
+                    
                }
           }
           .content{
@@ -706,6 +691,19 @@ html {
                &--title{
                     & h2{
                          width: 50%;
+                    }
+               }
+          }
+     }
+}
+@media screen and(max-width:300px) {
+     .container{
+          .footer{
+               &__container{
+                    &--block__1{
+                         & img{
+                              margin:0px;
+                         }
                     }
                }
           }
