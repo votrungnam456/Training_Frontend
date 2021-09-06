@@ -148,7 +148,10 @@ html {
                          display: none;
                          li{
                               background-color: #FFC472;
-                              border-bottom: 2px solid #D8A260;
+                              &:not(:last-child){
+                                   border-bottom: 2px solid #D8A260;
+                              }
+                              
                               background-image: none;
                               display: flex;
                               &::before{
@@ -267,7 +270,7 @@ html {
                                    border-radius: 5px 5px 5px 5px;
                                    width: 90%;
                                    height: 31px;
-                                   margin: 25px 13px 14px 13px;
+                                   margin: 15% 13px 14px 13px;
                                    & a{
                                         text-decoration: none;
                                         color: #FFF;
@@ -292,7 +295,7 @@ html {
                          position: absolute;
                          font-size: $font-size-medium;
                          top:13%;
-                         right: 0%;
+                         right: 1%;
                          color: #FFF;
                          background-color:#FE9407;
                          border: none;
@@ -653,6 +656,9 @@ html {
      }
 }
 @media screen and (max-width: 768px){
+     // .header , .content, .nav--responsive{
+     //      margin: 0px;
+     // }
      .container{
           .nav{
                &--icon__menu{
@@ -816,7 +822,7 @@ html {
      }
 }
 // @media screen and(max-width:730px) and (min-width:684px){
-//      .container{
+//      html{
 //           margin-right: -10px;
 //      }
      
