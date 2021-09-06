@@ -102,23 +102,25 @@
                          </div>
                     </div>
                     <div class="content__left--block__2">
-                         <div class="content--title">
+                         <div class="content--title title--2">
                               <h2>メニュー</h2>
                          </div>
                          <div class="content__left--block__2--list">
                               <div class="content__left--block__2--list__item">
-                                   <img src="/images/pic_content_left_list_1.png">
-
+                                   <img src="/images/pic_content_left_list_1.png" alt="">
+                                   <div class="content__left--block__2--list__item--title">
+                                        フェイシャル
+                                   </div>
                                    <p class="content__left--block__2--list__item--content">
                                         シミ・シワ・たるみ・ツヤ・ハリなど人によってお悩みが異なりま
                                         す。当サロンでは、お肌の状態に合わせたオーダーメイドフェイシ
                                         ャルを施術させて頂いております。
                                    </p>
-                                   <button>詳しくはコチラ</button>
+                                   <button><a href="#">詳しくはコチラ</a></button>
                               </div>
                               <div class="content__left--block__2--list__item">
-                                   <img src="/images/pic_content_left_list_2.png">
-
+                                   <img src="/images/pic_content_left_list_2.png" alt="">
+                                   <div class="content__left--block__2--list__item--title">ダイエット</div>
                                    <p class="content__left--block__2--list__item--content">
                                         自己流ダイエットでは痩せない・
                                         代謝が落ちて脂肪が落ちにくいな
@@ -127,11 +129,11 @@
                                         利用し、劇的に代謝を向上、
                                         脂肪燃焼につなげます。
                                    </p>
-                                   <button>詳しくはコチラ</button>
+                                   <button><a href="#">詳しくはコチラ</a></button>
                               </div>
                               <div class="content__left--block__2--list__item">
-                                   <img src="/images/pic_content_left_list_3.png">
-
+                                   <img src="/images/pic_content_left_list_3.png" alt="">
+                                   <div class="content__left--block__2--list__item--title">発毛</div>
                                    <p class="content__left--block__2--list__item--content">
                                         抜け毛・薄毛はスタイリングでは
                                         ごまかせません。抜け毛・薄毛の
@@ -139,15 +141,15 @@
                                         豊富な症例を持つ当サロンへ、
                                         まずはご相談下さい。
                                    </p>
-                                   <button>詳しくはコチラ</button>
+                                   <button><a href="#">詳しくはコチラ</a></button>
                               </div>
                          </div>
                     </div>
                     <div class="content__left--block__3">
-                         <div class="content--title">
+                         <div class="content--title title--3">
                               <h2>新着情報</h2>
                          </div>
-                         <button class="special__link">一覧へ</button>
+                         <button class="special__link"><a href="#">一覧へ</a></button>
                          <div class="content__left--block__3--list">
                               <ul>
                                    <li>2014/○○/××　テキストが入ります。</li>
@@ -181,8 +183,8 @@
                               </ul>
                          </div>
                     </div>
-                    <img class="content__right--img__2" src="images/pic_content_right_2.png" />
-                    <img src="images/pic_content_right_3.png" />
+                    <img class="content__right--img__2" src="images/pic_content_right_2.png" alt=""/>
+                    <img src="images/pic_content_right_3.png" alt=""/>
 
                     <div class="content__right--block__text__2">
                          <p class="content__right--block__text__2--title">Feminine（フェミニン）</p>
@@ -198,7 +200,7 @@
                               徒歩2分
                          </p>
                          <img class="content__right--block__text__2--img" src="/images/pic_content_right_4.png" alt="">
-                         <button>アクセスはこちら</button>
+                         <button><a href="#">アクセスはこちら</a></button>
                     </div>
                </div>
           </div>
@@ -211,8 +213,8 @@
                               営業時間　11:00～21:00（※入店・予約受付　19：30まで）
                          </p>
                          <div class="footer__container--block__1--phone__number">
-                              <button>予約制</button>
-                              <img src="/images/icon_banner_phone_number.png" />
+                              <button><a href="#">予約制</a></button>
+                              <img src="/images/icon_banner_phone_number.png" alt=""/>
                               <p>077-566-1070</p>
                          </div>
                     </div>
@@ -254,6 +256,14 @@
      </div>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script type="text/javascript">
+     $( document ).ready(function(){
+          let win = $(this);
+          if(win.width() > 768){
+               $('#navbar > li > a').attr('href','#');
+          }
+          else{
+               $('#navbar > li > a').removeAttr('href');
+          }
           $('#icon__menu').click(function () {
                if ($('#navbar').css("display") == "block")
                     $('#navbar').css("display", "none");
@@ -265,13 +275,22 @@
                // console.log(win.width())
                if(win.width() > 768){
                     if ($('#navbar').css("display") == "none" || $('#navbar').css("display") == "block")
-                    $('#navbar').css("display", "flex");
+                    {
+                         $('#navbar').css("display", "flex");
+                    }
+                    $('#navbar > li > a').attr('href','#');
                }
                else{
                     if ($('#navbar').css("display") == "flex")
-                    $('#navbar').css("display", "none");
+                    {
+                         $('#navbar').css("display", "none");
+                    }
+                    
+                    $('#navbar > li > a').removeAttr('href');
                }
           })
+     })
+
      </script>
 </body>
 
