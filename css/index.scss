@@ -81,6 +81,7 @@ html {
                          img{
                               width: 26px;
                               height: 23px;
+                              margin-right: 5px;
                          }
                     }
                     &__content{
@@ -646,6 +647,7 @@ html {
           }
      }
 }
+
 @media screen and (max-width:836px){
      .container{
           .nav{
@@ -819,11 +821,31 @@ html {
                     width: auto;
                }
           }
+          .footer{
+               &__container{
+                    &--block__1{
+                         &--phone__number{
+                              & button{
+                                   margin-right: 0px;
+                              }
+                         }
+                    }
+               }
+          }
      }
+
 }
-// @media screen and(max-width:730px) and (min-width:684px){
-//      html{
-//           margin-right: -10px;
-//      }
+@media screen and(max-width:960px) and (min-width:768px){
+     .container{
+          .content{
+               &__right{
+                    &--block__text__2{
+                         &--phone__number{
+                              font-size: 17px;
+                         }
+                    }
+               }
+          }
+     }
      
-// }
+}
