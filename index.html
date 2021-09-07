@@ -36,7 +36,7 @@
           </div>
           <nav class="nav">
                <div class="nav--icon__menu">
-                    <i id="icon__menu" class="fa fa-bars" width="30px" height="50px"></i>
+                    <i id="icon__menu" class="fa fa-bars fa-2x " width="30px" height="50px"></i>
                </div>
                <div class="nav--responsive">
                     <ul id="navbar" class="nav__menu container--initial">
@@ -109,7 +109,7 @@
                               <div class="content__left--block__2--list__item">
                                    <img src="/images/pic_content_left_list_1.png" alt="">
                                    <div class="content__left--block__2--list__item--title">
-                                        フェイシャル
+                                        <a href="#">フェイシャル</a>
                                    </div>
                                    <p class="content__left--block__2--list__item--content">
                                         シミ・シワ・たるみ・ツヤ・ハリなど人によってお悩みが異なりま
@@ -120,7 +120,7 @@
                               </div>
                               <div class="content__left--block__2--list__item">
                                    <img src="/images/pic_content_left_list_2.png" alt="">
-                                   <div class="content__left--block__2--list__item--title">ダイエット</div>
+                                   <div class="content__left--block__2--list__item--title"><a href="#">ダイエット</a></div>
                                    <p class="content__left--block__2--list__item--content">
                                         自己流ダイエットでは痩せない・
                                         代謝が落ちて脂肪が落ちにくいな
@@ -133,7 +133,7 @@
                               </div>
                               <div class="content__left--block__2--list__item">
                                    <img src="/images/pic_content_left_list_3.png" alt="">
-                                   <div class="content__left--block__2--list__item--title">発毛</div>
+                                   <div class="content__left--block__2--list__item--title"><a href="#">発毛</a></div>
                                    <p class="content__left--block__2--list__item--content">
                                         抜け毛・薄毛はスタイリングでは
                                         ごまかせません。抜け毛・薄毛の
@@ -193,10 +193,12 @@
                               <img src="/images/icon-content_right_1.png" alt="" />
                               <p>077-566-1070</p>
                          </div>
-                         <p class="content__right--block__text__2--content__2">営業時間：11:00～21:00 (予約制)<br />
-                              ※入店・予約受付　19:30まで
+                         <p class="content__right--block__text__2--content__2">
+                              営業時間：11:00～21:00<br/>(予約制)
+                              <br />
+                              ※入店・予約受付　19:30まで<br />
                               定休日：火曜日<br />
-                              JR東海道本線「草津」駅東口より
+                              JR東海道本線「草津」駅東口より<br/>
                               徒歩2分
                          </p>
                          <img class="content__right--block__text__2--img" src="/images/pic_content_right_4.png" alt="">
@@ -260,6 +262,7 @@
           let win = $(this);
           if(win.width() > 768){
                $('#navbar > li > a').attr('href','#');
+               
           }
           else{
                $('#navbar > li > a').removeAttr('href');
