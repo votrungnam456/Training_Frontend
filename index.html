@@ -4,16 +4,21 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
-     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <link href="/css/index.css" rel="stylesheet">
+     <style>
+          
+     </style>
      <title>Document</title>
 </head>
 <body>
      <div class="container">
           <header>
-               <div class="line__header">
+               <div class=" line__header">
                     <div class="container--initial">
                          <p>大阪府・京都・兵庫から全国各地への引越し・仏壇配送・単品配送</p>
                     </div>
@@ -31,6 +36,7 @@
                          <div class="header__content--text--button">
                               <button class="button__item">
                                    <i class="fas fa-play-circle"></i>
+                                   <!-- <i></i> -->
                                    <a href="#">見積り無料</a>
                               </button>
                               <button class="button__item">
@@ -43,7 +49,10 @@
           </header>
           <nav>
                <div class="container--initial">
-                    <ul class="menu">
+                    <div class="icon__menu">
+                         <i id="icon__menu" class="fa fa-bars"></i>
+                    </div>
+                    <ul id="navbar" class="menu">
                          <li><a href="#">ホーム</a></li>
                          <li><a href="#">当社の特色</a></li>
                          <li>
@@ -74,7 +83,7 @@
           <div class="content">
                <div class="main__content container--initial">
                     <div class="left">
-                         <div class="left--block__1">
+                         <div class="block left--block__1">
                               <div class="left--title">
                                    <h3>小規模の引越に強い</h3>
                               </div>
@@ -98,7 +107,7 @@
                                    </div>
                               </div>
                          </div>
-                         <div class="left--block__2">
+                         <div class="block left--block__2">
                               <div class="left--title">
                                    <h3>当社だからできる柔軟な引越しサービス</h3>
                               </div>
@@ -116,8 +125,8 @@
                                         <div class="content__list--item">
                                              <div class="content__list--item__img">
                                                   <img src="/images/pic_left_block_2--2.png" alt=""/>
-                                                  <div class="content__list--item__img--title">シンプルで分かりやすい<br/>
-                                                       明朗な料金体系！！</div>
+                                                  <div class="content__list--item__img--title">ハイフルーフ型で、<br/>
+                                                       掲載容量が大きい！！</div>
                                              </div>
                                              <p>車両をハイルーフ（荷室高215㎝）に拡張で、通常の赤帽車に比べて約60％の容量アップができます。
                                              </p>
@@ -125,8 +134,8 @@
                                         <div class="content__list--item">
                                              <div class="content__list--item__img">
                                                   <img src="/images/pic_left_block_2--3.png" alt=""/>
-                                                  <div class="content__list--item__img--title">シンプルで分かりやすい<br/>
-                                                       明朗な料金体系！！</div>
+                                                  <div class="content__list--item__img--title">若くて力持ち！！<br/>
+                                                       頼れる運送ドライバー</div>
                                              </div>
                                              <p>赤帽の中では1～2位を争う若手ドライバーが大切な荷物を丁寧迅速にお運びします。
                                              </p>
@@ -135,17 +144,161 @@
                                    <div class="content__button">
                                         <button class="button__item">
                                              <i class="fas fa-play-circle"></i>
-                                             <a href="#">当社の特色へ</a>
+                                             <a href="#">引越しサ−ビスへ</a>
                                         </button>
                                    </div>
                               </div>
                          </div>
+                         <div class="block left--block__3">
+                              <div class="left--title">
+                                   <h3>当社だからできる柔軟な引越しサービス</h3>
+                              </div>
+                              <div class="left--block__3--content">
+                                   <div class="content__list">
+                                        <div class="content__list--item">
+                                             <div class="content__list--item__img">
+                                                  <img src="/images/pic_left_block_3--1.png" alt=""/>
+                                                  <div class="content__list--item__img--title">配送技術が必要な仏壇</div>
+                                             </div>
+                                             <p>大切な仏壇の配送には専門知識と経験が必要です。仏具は梱包して、専用のケースでお運びします。
+                                             </p>
+                                        </div>
+                                        <div class="content__list--item">
+                                             <div class="content__list--item__img">
+                                                  <img class="border__img__grey" src="/images/pic_left_block_3--2.png" alt=""/>
+                                                  <div class="content__list--item__img--title">大型家電など単品の配送</div>
+                                             </div>
+                                             <p>冷蔵庫や乾燥機付き洗濯機など大型家電は通常サイズの乗用車では運べません。そんなちょっとした配送でも対応しています。
+                                             </p>
+                                        </div>
+                                        <div class="content__list--item">
+                                             <div class="content__list--item__img">
+                                                  <img src="/images/pic_left_block_3--3.png" alt=""/>
+                                                  <div class="content__list--item__img--title">高齢者宅などの宅内移動</div>
+                                             </div>
+                                             <p>高齢者は自宅の家具を移動するだけでも大変な作業です。無理して身体を壊される前に、お問い合わせください。
+                                             </p>
+                                        </div>          
+                                   </div>
+                                   <div class="content__button">
+                                        <button class="button__item">
+                                             <i class="fas fa-play-circle"></i>
+                                             <a href="#">運送サ−ビスへ</a>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="left--block__4">
+                              <div class="left--title">
+                                   <h3>お知らせ</h3>
+                              </div>
+                              <div class="left--block__4--content">
+                                   <ul class="left--block__4--content--list">
+                                        <li>
+                                             <p>2014年4月</p>
+                                             <p>ホームページリニューアルしました。</p>
+                                        </li>
+                                        <li>
+                                             <p>2014年4月</p>
+                                             <p>
+                                                  テキストがはいます。テキストがはいます。テキストがはいます。テキストがはいます。<br>
+                                                  テキストがはいます。テキストがはいます。テキストがはいます。
+                                             </p>
+                                        </li>
+                                        <li>
+                                             <p>2014年4月</p>
+                                             <p>
+                                                  テキストがはいます。テキストがはいます。テキストがはいます。テキストがはいます。<br>
+                                                  テキストがはいます。テキストがはいます。テキストがはいます。
+                                             </p>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
                     </div>
                     <div class="right">
-                         <p>AAAAAA</p>
+                         <img class="right__pic__1" src="/images/pic_right_1.png" alt="">
+                         <div class="right--block__1">
+                              <div class="right--block__1--title">
+                                   <h4>当社をご利用頂いたお客様の声</h4>
+                              </div>
+                              <div class="right--block__1--list">
+                                   <ul>
+                                        <li><a href="#">●●市から●●市への引越（●様）</a></li>
+                                        <li><a href="#">●●市から●●市への引越（●様）</a></li>
+                                        <li><a href="#">●●市から●●市への引越（●様）</a></li>
+                                        <li><a href="#">●●市から●●市への引越（●様）</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                         <div class="right--block__2">
+                              <div class="right--block__2--title">    
+                                   <h4>会社概要</h4>
+                              </div>
+                              <div class="right--block__2--text">
+                                   <b>赤帽いつも元気運送</b>
+                                   <p>TEL：0120-540-154</p>
+                                   <p>au：080-3813-5667</p>
+                                   <p>Fax：072-734-8778</p>
+                                   <p>【営業時間】24時間対応（年中無休)</p>
+                                   <img src="/images/pic_right_block_2-1.png" alt="">
+                                   <div class="right--block__2--text--button">
+                                        <button class="button__item">
+                                             <i class="fas fa-play-circle"></i>
+                                             <a href="#">会社概要</a>
+                                        </button>
+                                   </div>
+                              </div>
+                         </div>
+                         <img class="right__pic__2" src="/images/pic_right_2.png" alt="">
+                         <div class="right--block__3">
+                              <div class="right--block__3--content">
+                                   <b>【営業エリア】</b>
+                                   <p>大阪府全域・兵庫県東部・京都府南 <br/> 部から全国へ</p>
+                                   <img src="/images/pic_right_block_3-1.png" alt="">
+                                   <img src="/images/pic_right_block_3-1.png" alt="">
+                                   <img src="/images/pic_right_block_3-2.png" alt="">
+                                   <b>当社は赤帽グループの一員です。</b>
+                              </div>
+                         </div>
                     </div>
                </div>
           </div>
+          <footer>
+               <div class="container--initial footer__container">
+                    <div class="footer__container--list">
+                         <ul>
+                              <li><a href="#">HOME</a></li>
+                              <li><a href="#">ホーム</a></li>
+                              <li><a href="#">当社の特色</a></li>
+                              <li><a href="#">引越しサービス</a></li>
+                              <li><a href="#">運送サービス</a></li>
+                              <li><a href="#">料金案内</a></li>
+                              <li><a href="#">よくある質問</a></li>
+                              <li><a href="#">採用情報</a></li>
+                              <li><a href="#">会社概要</a></li>
+                              <li><a href="#">お問い合わせ</a></li>
+                              <li><a href="#">オンライン見積もり</a></li>
+                         </ul>
+                    </div>
+                    <div class="footer__container--contact">
+                         <img src="/images/pic_header.png" alt=""/>
+                         <p>大阪府豊能郡豊能町東ときわ台8-11-10</p>
+                         <div class="footer__container--contact--phone__number">
+                              <img src="/images/icon_header.png" alt="">
+                              <p>0120-540-154</p>
+                         </div>
+                         
+                    </div>
+               </div>
+               <div class="copy__right">
+                    <div class="container--initial">
+                         <p>Copyright(C)2014　大阪府の引越し業者 赤帽いつも元気運送 All Rights Reserved.</p>
+                    </div>
+               </div>
+          </footer>
      </div>
 </body>
+
+<script src="/js/index.js"></script>
 </html>
