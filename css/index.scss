@@ -523,6 +523,19 @@
                               width: 100%;
                          }
                     }
+                    &--text{
+                         text-align: left;
+                         &--phone__number{
+                              justify-content: flex-start;
+                         }
+                         &--button{
+                              justify-content: flex-start;
+                              & .button__item{
+                                   margin-left: 0px;
+                                   margin-right: 6px;
+                              }
+                         }
+                    }
                }
           }
           .content{
@@ -553,9 +566,9 @@
                     justify-content: space-around;
                     flex-wrap: wrap;
                     // &--contact{
-                    //      // text-align: center;
+                    //      text-align: left;
                     //      &--phone__number{
-                    //           justify-content: center;
+                    //           justify-content: flex-start;
                     //      }
                     // }
                }
