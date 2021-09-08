@@ -303,7 +303,7 @@ html {
                     .special__link{
                          display: flex;
                          justify-content: center;
-                         align-items: center;
+                         // align-items: center;
                          position: absolute;
                          font-size: 11px;
                          top:13%;
@@ -312,7 +312,6 @@ html {
                          background-color:#FE9407;
                          border: none;
                          border-radius: 3px 3px 3px 3px;
-                         width: 57px;
                          height: 17px;
                          width: auto;
                          & a{
@@ -320,7 +319,7 @@ html {
                               color: #FFF;
                               width: 100%;
                               padding: 0px 8px 0px 15px;
-                              margin-top: 4px;
+                              // margin-top: 4px;
                               position: relative;
                               // margin-top: 4px;
                               &::before{
@@ -769,6 +768,13 @@ html {
                     flex-wrap: wrap;
                     &--img{
                          flex-wrap: wrap;
+                         justify-content: center;
+                    }
+                    &--text{
+                         text-align: left;
+                         &__phone__number{
+                              justify-content: flex-start;
+                         }
                     }
                }
           }
