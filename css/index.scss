@@ -623,6 +623,10 @@ html {
      .header , .content, .nav--responsive{
           margin: 0px 10px 0px 10px;
      }
+     .container--initial{
+          margin-left: 10px;
+          margin-right: 10px;
+     }
      .container{
           .content{
                &__left{
@@ -639,8 +643,6 @@ html {
           }
           .footer{
                &__container{
-                    margin-left: 10px;
-                    margin-right: 10px;
                     &--block__1{
                          margin-right: 3%;
                          margin-bottom: 10px;
