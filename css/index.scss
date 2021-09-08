@@ -419,7 +419,7 @@ html {
                }
                &--block__text__2{
                     border: 6px solid #E9DFD9;
-                    padding:0px 16px 0px 11px;
+                    padding:0px 11px 0px 11px;
                     border-radius: 3px;
                     &--title{
                          margin-top: 24px;
@@ -451,6 +451,7 @@ html {
                     &--img{
                          width: 100%;
                          margin:14px 0px 0px 0px;
+                         margin-bottom: 0px !important;
                     }
                     & button{
                          display: flex;
