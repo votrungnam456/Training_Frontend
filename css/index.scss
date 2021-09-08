@@ -565,12 +565,13 @@
                .footer__container{
                     justify-content: space-around;
                     flex-wrap: wrap;
-                    // &--contact{
-                    //      text-align: left;
-                    //      &--phone__number{
-                    //           justify-content: flex-start;
-                    //      }
-                    // }
+                    &--contact{
+                         text-align: left;
+                         margin-top: 10px;
+                         &--phone__number{
+                              justify-content: flex-start;
+                         }
+                    }
                }
           }
      }
@@ -588,36 +589,3 @@
           }
      }
 }
-// @media screen and (max-width:375px){
-//      .container{
-//           // nav{
-//           //      & .menu{
-//           //           & li{
-//           //                & .dropdown{
-//           //                     position: initial;
-//           //                }
-//           //           }
-//           //      }
-//           // }
-//           header{
-//                & .line__header{
-//                     text-align: center;
-//                }
-//           }
-//      }
-// }
-// @media screen and (max-width:375px){
-//      .container{
-//           .content{
-//                & .main__content{
-//                     & .right{
-//                          max-width: 100%;
-//                          & img{
-//                               width: 100%;
-//                          }
-//                     }
-//                }
-//           }
-               
-//      }
-// }
