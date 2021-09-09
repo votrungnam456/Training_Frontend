@@ -23,7 +23,7 @@
      font-weight: bold;
      background-image: url("/images/pic_img-shadow.png");
      background-size: cover;
-     font-size: 13px;
+     font-size: 0.8125rem;
      & a{
           text-decoration: none;
           color:black
@@ -48,7 +48,7 @@
           .line__header{
                background-color: #E00012;
                color: #FFF;
-               font-size: 12px;
+               font-size: 	0.75rem;
                
           }
           .header__content{
@@ -60,7 +60,7 @@
                     text-align: right;
                     margin-top: 5px;
                     & p{
-                         font-size: 14px;
+                         font-size: 0.875rem;
                     }
                     &--phone__number{
                          display: flex;
@@ -69,7 +69,7 @@
                          margin-top: 6px;
                          margin-bottom: 7px;
                          & h4{
-                              font-size: 27px;
+                              font-size: 1.6875rem;
                          }
                          & img{
                               width: 35px;
@@ -102,7 +102,7 @@
                display: flex;
                justify-content: space-between;
                list-style: none;
-               font-size: 16px;
+               font-size:1rem;
                & li{
                     width:100%;
                     display: flex;
@@ -138,7 +138,7 @@
                               display: flex;
                               color: #FFF;
                               align-items: center;
-                              font-size: 14px;
+                              font-size: 0.875rem;
                               & i{
                                    margin-left: 10px;
                               }
@@ -178,7 +178,7 @@
                          background-size: cover; 
                          border: 1px solid #DEDEDE;
                          border-bottom: 3px solid #DA0410;
-                         font-size: 17px;
+                         font-size: 1.0625rem;
                          padding: 14px 0px 10px 15px;
                     }
                     &--block__1{
@@ -191,20 +191,20 @@
                               }
                               &--text{
                                    & h4{
-                                        font-size: 20px;
+                                        font-size: 1.25rem;
                                         color: #DA0410;
                                         margin:0px;
                                         margin-bottom: 10px;
                                    }
                                    & p{
                                         color: #3B3B3B;
-                                        font-size: 13px;
+                                        font-size: 0.8125rem;
                                    }
                                    &--button{
                                         display: flex;
                                         justify-content: flex-end;
                                         & .button__item{
-                                             font-size: 14px;
+                                             font-size: 0.875rem;
                                              margin-top: 19px;
                                              padding:10px 29px 10px 21px;
                                              & i{
@@ -226,7 +226,7 @@
                          &--content{
                               &--list{
                                    list-style: none;
-                                   font-size: 13px;
+                                   font-size: 0.8125rem;
                                    & li{
                                         display: flex;
                                         // justify-content: space-between;
@@ -240,13 +240,14 @@
                                         & p:first-child{
                                              margin-left: 18px;
                                              margin-right: 20px;
+                                             white-space: nowrap;
                                         }
                                         &::before{
                                              content: "\25B6";
                                              font-size: 6px;
                                              // margin-right: 5px;
                                              position: absolute;
-                                             top:-5%;
+                                             top:0%;
                                              left:7px
                                         }
                                    }
@@ -271,7 +272,7 @@
                     &--block__1{
                          margin-bottom: 21px;
                          &--title{
-                              font-size: 14px;
+                              font-size: 0.875rem;
                               border-bottom: 2px solid #DA0410;
                               padding-bottom: 6px;
                               text-align: center;
@@ -280,7 +281,7 @@
                               margin-top: 14px;
                               & ul{
                                    list-style: none;
-                                   font-size: 12px;
+                                   font-size: 0.75rem;
                                    & li{
                                         margin-left: 21px;
                                         position: relative;
@@ -308,14 +309,14 @@
                               border-radius: 3px 3px 3px 3px;
                               color: #FEFEFE;
                               text-align: center;
-                              font-size: 14px;
+                              font-size: 0.875rem;
                               & h4{
                                    padding: 7px 0px;
                               }
                          }
                          &--text{
                               margin:0px 12px;
-                              font-size: 12px;
+                              font-size: 0.75rem;
                               text-align: center;
                               & img{
                                    margin-bottom: 9px;
@@ -339,7 +340,7 @@
                          background-color: #FFF0B2;
                          &--content{
                               margin: 0px 15px 0px 16px;
-                              font-size: 12px;
+                              font-size: 0.75rem;
                               & img{
                                    margin-bottom: 4px;
                               }
@@ -347,11 +348,14 @@
                     }
                }
           }
-          &__list{
-               display: flex;
-               justify-content: space-between;
-               flex-wrap: wrap; 
-               
+          .list{
+
+               & ul{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap; 
+               }
                &--item{
                     max-width: 221px;
                     margin-bottom: 10px;
@@ -370,7 +374,7 @@
                               text-align: center;
                               align-items: center;
                               position: absolute;
-                              font-size: 15px;
+                              font-size: 0.9375rem;
                               font-weight: bold;
                               top:65%;
                               width: 100%;
@@ -384,7 +388,7 @@
                          }
                     }
                     & p{
-                         font-size: 13px;
+                         font-size: 0.8125rem;
                          margin-top: 5px;
                     }
                }
@@ -418,8 +422,16 @@
                               // justify-content: space-between;
                               flex-wrap: wrap;
                               list-style: none;
-                              font-size: 13px;
-                              
+                              font-size: 0.75rem;
+                              & .item__special{
+                                   margin-right: 0px;
+                                   & a{
+                                        &::after{
+                                             content: "|";
+                                             margin-left: 15px;
+                                        }
+                                   }
+                              }
                               & li{
                                    margin-right: 15px;
                                    margin-bottom: 5px;
@@ -437,7 +449,7 @@
                     &--contact{
                          
                          text-align: right;
-                         font-size: 12px;
+                         font-size:0.75rem;
                          & img{
                               width: 80%;
                          }
@@ -457,7 +469,7 @@
           .copy__right{
                background: black;
                color: white;
-               font-size: 12px;
+               font-size: 0.75rem;
                text-align: center;
           }
      }  
@@ -477,6 +489,9 @@
      }
 }
 @media screen and (max-width:768px){
+     *{
+          font-size: 15px;
+     }
      .container{
           nav{
                & .icon__menu{
@@ -507,6 +522,29 @@
                     }
 
 
+               }
+          }
+     }
+}
+@media screen and (max-width:760px) {
+     .container{
+          footer{
+               .footer{
+                    &__container{
+                         &--list{
+                              & ul{
+                                   & .item__special{
+                                        margin-right: 15px;
+                                        & a{
+                                             &::after{
+                                                  content: "";
+                                                  margin-left: 0px;
+                                             }
+                                        }
+                                   }
+                              }
+                         }
+                    }
                }
           }
      }
@@ -554,8 +592,11 @@
                          }
                     }
                }
-               &__list{
-                    justify-content: space-around;
+               .list{
+                    & ul{
+                         justify-content: space-around;
+                    }
+                    
                     &--item{
                          margin-bottom: 5px;
                     }
@@ -577,15 +618,23 @@
      }
 }
 @media screen and (max-width:457px){
+     *{
+          font-size: 14px;
+     }
      .container{
           .content{
-               &__list{
+               .list{
                     &--item{
-                         &:last-child{
-                              margin-right: 5px;
+                         &:not(:last-child){
+                              margin-right:0px;
                          }
                     }
                }
           }
+     }
+}
+@media screen and (max-width:457px){
+     *{
+          font-size: 11px;
      }
 }
