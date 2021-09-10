@@ -320,6 +320,7 @@
                                              & i {
                                                   margin-right: 11px;
                                              }
+                                             // white-space: nowrap;
                                         }
                                    }
                               }
@@ -337,31 +338,28 @@
                          &--content {
                               &--list {
                                    list-style: none;
-                                   // font-size: 0.8125rem;
                                    @include responsive-font(get-vw-hack(931px, 13px), 9px, 13px);
                                    & li {
                                         display: flex;
-                                        // justify-content: space-between;
                                         color: #3b3b3b;
-                                        position: relative;
                                         border-bottom: 2px dotted black;
                                         padding-bottom: 11px;
                                         &:not(:first-child) {
                                              margin-top: 11px;
                                         }
                                         & p:first-child {
-                                             margin-left: 18px;
+                                             margin-left: 8px;
                                              margin-right: 20px;
                                              white-space: nowrap;
                                         }
                                         &::before {
                                              content: "\25B6";
-                                             // font-size: 6px;
                                              @include responsive-font(get-vw-hack(931px, 6px), 4px, 6px);
-                                             // margin-right: 5px;
-                                             position: absolute;
-                                             top: 0%;
-                                             left: 7px;
+                                             margin-right: 5px;
+                                             margin-left: 5px;
+                                             // position: absolute;
+                                             // top: 0%;
+                                             // left: 7px;
                                         }
                                    }
                               }
@@ -621,9 +619,6 @@
      }
 }
 @media screen and (max-width: 768px) {
-     // *{
-     //      font-size: 15px;
-     // }
      .container {
           nav {
                & .icon__menu {
@@ -634,22 +629,11 @@
                     display: none;
                     width: 10rem;
                     & li {
-                         // -webkit-box-shadow:0 5px 5px #747070;
-                         // -moz-box-shadow: 0 5px 5px #747070;
-                         // -o-box-shadow: 0 5px 5px #747070;
-                         // box-shadow: 0 5px 5px #747070;
                          border: 1px solid #dedede;
                          & .dropdown {
                               z-index: 2;
-                              // display: none;
                               left: 100%;
                               top: 0%;
-                              // & li{
-                              //      -webkit-box-shadow:0 0px 0px #747070;
-                              //      -moz-box-shadow: 0 0px 0px #747070;
-                              //      -o-box-shadow: 0 0px 0px #747070;
-                              //      box-shadow: 0 0px 0px #747070;
-                              // }
                          }
                     }
                }
@@ -833,7 +817,10 @@
                                              & .button__item {
                                                   @include responsive-font(get-vw-hack(640px, 16px), 12px, 16px);
                                                   margin-top: calc-percent(19, 686);
-                                                  padding: calc-percent(10, 686) calc-percent(29, 686) calc-percent(10, 686) calc-percent(21, 686);
+                                                  // padding: calc-percent(10, 686) calc-percent(35, 686) calc-percent(10, 686) calc-percent(21, 686);
+                                                  // & i {
+                                                  //      margin-right: 9px;
+                                                  // }
                                              }
                                         }
                                    }
@@ -856,7 +843,7 @@
                                                   margin-top: calc-percent(11, 686);
                                              }
                                              & p:first-child {
-                                                  margin-left: calc-percent(18, 686);
+                                                  margin-left: calc-percent(8, 686);
                                                   margin-right: calc-percent(20, 686);
                                              }
                                              & p {
@@ -864,6 +851,8 @@
                                              }
                                              &::before {
                                                   @include responsive-font(get-vw-hack(640px, 8px), 6px, 8px);
+                                                  margin-right: calc-percent(5, 686);
+                                                  margin-left: calc-percent(5, 686);
                                              }
                                         }
                                    }
@@ -938,7 +927,7 @@
 
                          & p {
                               @include responsive-font(get-vw-hack(640px, 16px), 12px, 16px);
-                              argin-top: calc-percent(5, 686);
+                              margin-top: calc-percent(5, 686);
                          }
                     }
                }
@@ -957,11 +946,7 @@
                               & ul {
                                    @include responsive-font(get-vw-hack(640px, 14px), 10px, 14px);
                                    & .item__special {
-                                        & a {
-                                             &::after {
-                                                  margin-left: calc-percent(15, 580);   
-                                             }
-                                        }
+                                        margin-right: calc-percent(15, 580); 
                                    }
                                    & li {
                                         margin-right: calc-percent(15, 580); 
