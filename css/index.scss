@@ -889,7 +889,7 @@
                               &--list {
                                    margin-top:  calc-percent(14, 231);
                                    & ul {
-                                        @include responsive-font(get-vw-hack(640px, 13px), 10px, 13px);
+                                        @include responsive-font(get-vw-hack(640px, 13px), 11px, 13px);
                                         & li {
                                              margin-left: calc-percent(21, 231);
                                              &::before {
@@ -909,7 +909,7 @@
                               }
                               &--text {
                                    margin: calc-percent(0, 231) calc-percent(12, 231) ;
-                                   @include responsive-font(get-vw-hack(640px, 16px), 10px, 16px);
+                                   @include responsive-font(get-vw-hack(640px, 15px), 11px, 15px);
                                    & img {
                                         margin-bottom: calc-percent(9, 231) 
                                    }
