@@ -4,6 +4,8 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <title>Bài 6c</title>
      <link rel="stylesheet" href="/css/index.css">
 </head>
@@ -23,27 +25,43 @@
           <nav>
                <div class="nav">
                     <p>みやじま歯科医院</p>
-                    <div class="nav__menu">
-                         <ul>
+                    <div class="icon__menu">
+                         <i id="icon__menu" class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div id="navbar" class="nav__menu">
+                         <ul >
                               <li>
-                                   <h5>クリニック案内</h5>
-                                   <p>INFORMATION</p>
+                                   <a href="#">
+                                        <h5>クリニック案内</h5>
+                                        <p>INFORMATION</p>
+                                   </a>
                               </li>
                               <li>
-                                   <h5>スタッフ紹介</h5>
-                                   <p>STAFF</p>
+                                   <a href="#">
+                                        <h5>スタッフ紹介</h5>
+                                        <p>STAFF</p>
+                                   </a>
+
                               </li>
                               <li>
-                                   <h5>診療内容</h5>
-                                   <p>TREATMENT</p>
+                                   <a href="#">
+                                        <h5>診療内容</h5>
+                                        <p>TREATMENT</p>
+                                   </a>
                               </li>
                               <li>
-                                   <h5>アクセス</h5>
-                                   <p>ACCESS</p>
+                                   <a href="#">
+                                        <h5>アクセス</h5>
+                                        <p>ACCESS</p>
+                                   </a>
+
                               </li>
                               <li>
-                                   <h5>お知らせ</h5>
-                                   <p>TOPICS</p>
+                                   <a href="#">
+                                        <h5>お知らせ</h5>
+                                        <p>TOPICS</p>
+                                   </a>
+
                               </li>
                          </ul>
                     </div>
@@ -109,11 +127,59 @@
                                    <p>2014.00.00</p>
                                    <p>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
                               </li>
+                              <li>
+                                   <p>2014.00.00</p>
+                                   <p>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+                              </li>
+                              <li>
+                                   <p>2014.00.00</p>
+                                   <p>タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+                              </li>
                          </ul>
                     </div>
                </div>
+               <div class="cirle">
+                    <h3>DOCTOR</h3>
+                    <p>当院のドクターを<br/>ご紹介</p>
+               </div>
           </div>
      </div>
+     <footer>
+            <div class="container">
+                 <div class="page__top">
+                    <p>PAGE TOP</p>
+                 </div>
+                 <div class="menu__link">
+                    <ul>
+                         <li><a href="#">HOME</a></li>
+                         <li><a href="#">クリニック案内</a></li>
+                         <li><a href="#">スタッフ紹介</a></li>
+                         <li><a href="#">診療内容</a></li>
+                         <li><a href="#">アクセス</a></li>
+                         <li><a href="#">スタッフ募集</a></li>
+                         <li><a href="#">お知らせ</a></li>
+                         <li><a href="#">アンチエイジング</a></li>
+                         <li><a href="#">かみあわせ</a></li>
+                         <li><a href="#">矯正歯科</a></li>
+                         <li><a href="#">口腔外科</a></li>
+                         <li><a href="#">一般歯科</a></li>
+                         <li><a href="#">ホワイトニング</a></li>
+                    </ul>
+                 </div>
+                 <div class="contact">
+                    <h3>みやじま歯科医院</h3>
+                    <div class="contact--phone__number">
+                         <img src="/img/icon_phone.png" alt="">
+                         <p>052-681-4618</p>
+                    </div>
+                    <p>愛知県名古屋市熱田区玉ノ井町11-11 ファミール神宮1F</p>
+                 </div>
+                 <div class="copy__right">
+                      <p>© みやじま歯科医院 All rights reserved.</p>
+                 </div>
+            </div>   
+     </footer>
 </body>
+<script src="/js/index.js"></script>
 </html>
 
