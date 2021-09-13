@@ -14,3 +14,5 @@ Bài 5: http://bai5-vtn-fend.surge.sh/
 Bài 6a: http://bai6a-vtn-fend.surge.sh/
 
 Bài 6b: http://bai6b-vtn-fend.surge.sh/
+
+Bài 6c: http://bai6c-vtn-fend.surge.sh/
