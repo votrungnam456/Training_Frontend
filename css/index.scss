@@ -441,14 +441,14 @@ footer{
                .hot__news{
                     justify-content: space-around;
                     &--title{
-                         margin-top: calc-percent(5, 1024);
+                         margin-top: calc-percent(10, 1024);
                     }
                     &--list{
-                         margin-top: calc-percent(5, 1024);
+                         margin-top: calc-percent(10, 1024);
                     }
                }
                .cirle{
-                    margin-top: calc-percent(5, 1024);
+                    margin-top: calc-percent(10, 1024);
                     height: 181px;
                }
           }
@@ -502,6 +502,19 @@ footer{
           }
           .bottom{
                margin-top: calc-percent(14, 679);
+          }
+     }
+}
+@media screen and(max-width:512px) {
+     .container{
+          nav{
+               & .nav{
+                    &__menu{
+                         & ul{
+                              display: block;
+                         }
+                    }
+               }
           }
      }
 }
